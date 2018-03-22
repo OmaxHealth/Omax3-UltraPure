@@ -1,0 +1,493 @@
+// Page: Home
+body.page-home {
+	main {
+		// Section: Hero
+		#hero {
+			h1 {@include font('MontserratSemiBold'); color:#000;
+				small {font-style:inherit; font-weight:inherit; line-height:inherit; color:$color-green;}
+			}
+			img.product,
+			img.asot {position:absolute; z-index:0;}
+			.cta {position:absolute; display:block; background-color:#fff; z-index:2;
+				img {@include center-horizontal();}
+				h2 {@include font('MontserratSemiBold'); color:#000;}
+				ul li {position:relative; @include font('MontserratMedium'); color:#000;
+					&:before {content:""; position:absolute; top:0px; left:0px; display:block; @include image-background($image-hero-bullet);}
+					&:last-of-type {@include font('MontserratSemiBold');}
+				}
+			}
+			
+			@include desktop {
+				& {@include image-background($image-hero-bg-desktop,'top center','auto 100%');}
+			}
+			@include desktop_1280 {
+				.container {height:820px;}
+				h1 {@include font-size(58px); letter-spacing:-0.02em; padding:30px 10px 0;
+					small {@include font-size(38px,58px);}
+				}
+				img.product {left:140px; bottom:10px; @include image-size($image-hero-product,530px);}
+				img.asot {left:510px; top:185px; @include image-size($image-hero-asot,150px);}
+				.cta {right:0px; top:140px; width:560px; padding:0 40px 20px;
+					img {@include image-size($image-hero-free-gift,420px); margin-bottom:10px;}
+					h2 {@include font-size(28px); margin-bottom:26px;}
+					ul {margin-bottom:20px;
+						li {@include font-size(22px,30px); padding-left:36px; min-height:20px; margin-bottom:10px;
+							&:before {top:2px; @include image-size($image-hero-bullet,20px);}
+							&:last-of-type {@include font-size(26px,30px);}
+						}
+					}
+				}
+			}
+			@include desktop_1024 {
+				.container {height:660px;}
+				h1 {@include font-size(48px); letter-spacing:-0.03em; padding:20px 10px 0;
+					small {@include font-size(30px,48px);}
+				}
+				img.product {left:120px; bottom:45px; @include image-size($image-hero-product,370px);}
+				img.asot {left:370px; top:160px; @include image-size($image-hero-asot,120px);}
+				.cta {right:0px; top:110px; width:470px; padding:0 40px 20px;
+					img {@include image-size($image-hero-free-gift,320px); margin-bottom:12px;}
+					h2 {@include font-size(22px); margin-bottom:14px;}
+					ul {margin-bottom:20px;
+						li {@include font-size(18px,24px); padding-left:26px; min-height:14px; margin-bottom:8px;
+							&:before {top:4px; @include image-size($image-hero-bullet,14px);}
+							&:last-of-type {@include font-size(22px,26px);}
+						}
+					}
+				}
+			}
+			@include tablet_down {
+				& {@include image-background-file($image-hero-bg-mobile);}
+				h1, h1 small {position:absolute; left:0px; right:0px; text-align:center;}
+				.cta {position:relative; top:auto; left:auto; right:auto; @include center-horizontal(); background-color:transparent; width:100%;
+					h2, ul {@include center-horizontal();}
+					h2 {text-align:center;}
+				}
+			}
+			@include tablet {
+				& {@include image-background-style('top 120px center','auto 560px');}
+				.container {padding-top:600px; padding-bottom:40px;}
+				h1 {@include font-size(62px); letter-spacing:-0.01em; top:20px;
+					small {@include font-size(42px); top:70px;}
+				}
+				img.product {right:10px; top:150px; @include image-size($image-hero-product,390px);}
+				img.asot {right:10px; top:170px; @include image-size($image-hero-asot,130px);}
+				.cta {
+					img {@include image-size($image-hero-free-gift,600px,240px); border-top:10px solid #fff; border-left:60px solid #fff; border-right:60px solid #fff; margin-bottom:12px;}
+					h2 {@include font-size(42px); margin-bottom:20px;}
+					ul {max-width:680px; margin-bottom:50px;
+						li {@include font-size(30px,36px); padding-left:36px; min-height:36px; margin-bottom:20px;
+							&:before {top:8px; @include image-size($image-hero-bullet,20px);}
+							&:last-of-type {@include font-size(34px,36px);}
+						}
+					}
+				}
+			}
+			@include mobile_540 {
+				& {@include image-background-style('top 80px center','auto 400px');}
+				.container {max-width:510px; padding-top:420px; padding-bottom:30px;}
+				h1 {@include font-size(42px); letter-spacing:-0.01em; top:15px;
+					small {@include font-size(30px); top:46px;}
+				}
+				img.product {right:5px; top:100px; @include image-size($image-hero-product,280px);}
+				img.asot {right:5px; top:115px; @include image-size($image-hero-asot,90px);}
+				.cta {
+					img {@include image-size($image-hero-free-gift,340px,140px); border-top:10px solid #fff; border-left:40px solid #fff; border-right:40px solid #fff; margin-bottom:12px;}
+					h2 {@include font-size(30px); letter-spacing:-0.04em; margin-bottom:20px;}
+					ul {max-width:680px; margin-bottom:30px;
+						li {@include font-size(22px,28px); padding-left:30px; min-height:36px; margin-bottom:20px;
+							&:before {top:6px; @include image-size($image-hero-bullet,16px);}
+							&:last-of-type {@include font-size(24px,30px);}
+						}
+					}
+				}
+			}
+			@include mobile_360 {
+				& {@include image-background-style('top 50px center','auto 270px');}
+				.container {max-width:330px; padding-top:280px; padding-bottom:20px;}
+				h1 {@include font-size(28px); top:6px;
+					small {@include font-size(20px); top:30px;}
+				}
+				img.product {right:10px; top:70px; @include image-size($image-hero-product,180px);}
+				img.asot {right:10px; top:80px; @include image-size($image-hero-asot,60px);}
+				.cta {
+					img {@include image-size($image-hero-free-gift,300px,120px); border-top:10px solid #fff; border-left:40px solid #fff; border-right:40px solid #fff; margin-bottom:12px;}
+					h2 {@include font-size(18px); margin-bottom:20px;}
+					ul {max-width:680px; margin-bottom:20px;
+						li {@include font-size(16px,18px); padding-left:25px; min-height:36px; margin-bottom:10px;
+							&:before {top:2px; @include image-size($image-hero-bullet,14px);}
+							&:last-of-type {@include font-size(18px,20px);}
+						}
+					}
+				}
+			}
+						
+		}	
+		
+		// Section: Quotes
+		#quotes {
+			& {background-color:$color-green;}
+			h2,h3 {@include font('MontserratSemiBold'); color:#fff;}
+			p {@include font('MontserratMedium'); color:#fff;}
+			h2,h3,p {@include center-horizontal(); text-align:center;}
+
+			@include desktop_1280 {
+				.container {padding:40px 0;}
+				h2 {@include font-size(50px); margin-bottom:40px;}
+				.flexcolumn {padding:0 10px;
+					.column {width:390px;
+						img {@include image-size($image-quote-person,390px); margin-bottom:20px;}
+						h3 {@include font-size(26px,28px); min-height:110px;}
+						p {@include font-size(24px,30px);}
+					}
+				}
+			}
+			@include desktop_1024 {
+				.container {padding:34px 0;}
+				h2 {@include font-size(42px); margin-bottom:34px;}
+				.flexcolumn {padding:0 15px;
+					.column {width:310px;
+						img {@include image-size($image-quote-person,310px); margin-bottom:20px;}
+						h3 {@include font-size(22px,24px); min-height:90px;}
+						p {@include font-size(18px,26px);}
+					}
+				}
+			}
+			@include tablet_down {
+				.column {
+					&:last-of-type{margin-bottom:0px;}
+					& > * {@include center-horizontal();}
+				}
+			}
+			@include tablet {
+				.container {padding-top:30px; padding-bottom:60px;}
+				h2 {@include font-size(48px,52px); margin-bottom:30px;}
+				.column {margin-bottom:60px;
+					img {@include image-size($image-quote-person,600px); margin-bottom:30px;}
+					h3 {@include font-size(36px,40px); margin-bottom:30px;}
+					p {@include font-size(30px,40px);}
+					
+					&:nth-of-type(3) {
+						h3 {width:600px;}
+						p {letter-spacing:-0.01em;}
+					}
+				}
+			}
+			@include mobile_540 {
+				.container {padding-top:20px; padding-bottom:40px;}
+				h2 {@include font-size(34px,36px); margin-bottom:20px;}
+				.column {margin-bottom:40px;
+					img {@include image-size($image-quote-person,510px); margin-bottom:20px;}
+					h3 {@include font-size(26px,28px); max-width:510px; margin-bottom:20px;}
+					p {@include font-size(22px,28px);}
+					
+					&:nth-of-type(3) {
+						h3 {max-width:460px;}
+						p {letter-spacing:-0.02em;}
+					}
+				}
+			}
+			@include mobile_360 {
+				.container {padding-top:16px; padding-bottom:30px;}
+				h2 {@include font-size(24px,26px); margin-bottom:16px;}
+				.column {margin-bottom:20px;
+					img {@include image-size($image-quote-person,330px); margin-bottom:16px;}
+					h3 {@include font-size(16px,18px); max-width:330px; margin-bottom:16px;}
+					p {@include font-size(14px,18px);}
+					
+					&:nth-of-type(3) {
+						h3 {max-width:280px;}
+						p {letter-spacing:-0.01em;}
+					}
+				}
+			}
+
+		}
+		
+		// Section: Freezer Test	
+		#freezer {
+			.container > * {@include center-horizontal(); text-align:center;}
+			h2 {@include font('MontserratSemiBold'); color:$color-green;}
+			p {@include font('MontserratMedium');
+				strong {@include font('MontserratBold'); font-size:inherit; line-height:inherit;}
+			}
+			.cta {position:relative;
+				& > * {@include center-horizontal(); text-align:center;}
+				h3 {@include font('MontserratBlack'); color:$color-orange;
+					sup {font-weight:inherit; font-size:70%;}
+				}
+				span {display:block;
+					&.ln1 {@include font('MontserratSemiBold'); color:$color-orange;}
+					&.ln2 {@include font('MontserratSemiBold'); color:#666; font-style:italic; position:absolute; display:block; text-align:center;}
+					&.ln3 {@include font('MontserratBold'); color:#666;}
+				}
+				.imageWrap {position:relative;}
+			}
+			
+			@include desktop_1280 {
+				.container {padding:40px 10px;}
+				h2 {@include font-size(50px); margin-bottom:40px;}
+				p {@include font-size(26px,32px); width:1000px; margin-bottom:30px;
+					&:last-of-type {margin-bottom:80px;}
+				}
+				.cta {width:790px;
+					h3 {@include font-size(46px); margin-bottom:10px;}
+					img.freezerTest {@include image-size($image-freezer-test,790px); margin-bottom:20px;}
+					span {
+						&.ln1 {@include font-size(28px); margin-bottom:20px;}
+						&.ln3 {@include font-size(18px,22px); margin-bottom:40px;}
+						&.ln2 {@include font-size(20px,24px); right:120px; bottom:30px;}
+					}
+				}
+			}
+			@include desktop_1024 {
+				.container {padding:34px 10px;}
+				h2 {@include font-size(40px); margin-bottom:34px;}
+				p {@include font-size(20px,28px); width:800px; margin-bottom:20px;
+					&:last-of-type {margin-bottom:60px;}
+				}
+				.cta {width:640px;
+					h3 {@include font-size(40px); margin-bottom:10px;}
+					img.freezerTest {@include image-size($image-freezer-test,640px); margin-bottom:20px;}
+					span {
+						&.ln1 {@include font-size(24px); margin-bottom:20px;}
+						&.ln3 {@include font-size(18px,22px); margin-bottom:34px;}
+						&.ln2 {@include font-size(18px,22px); right:90px; bottom:24px;}
+					}
+				}
+			}
+			@include tablet {
+				.container {padding-top:40px; padding-bottom:70px;}
+				h2 {@include font-size(48px,52px); margin-bottom:40px;}
+				p {@include font-size(30px,40px); margin-bottom:30px;
+					&:last-of-type {margin-bottom:40px;}
+				}
+				.cta {width:700px;
+					h3 {@include font-size(40px); margin-bottom:10px;}
+					img.freezerTest {@include image-size($image-freezer-test,700px); margin-bottom:20px;}
+					span {
+						&.ln1 {@include font-size(24px); margin-bottom:20px;}
+						&.ln3 {@include font-size(20px,24px); margin-bottom:34px;}
+						&.ln2 {@include font-size(18px,22px); right:104px; bottom:40px;}
+					}
+				}
+			}
+			@include mobile_540 {
+				.container {padding-top:30px; padding-bottom:50px;}
+				h2 {@include font-size(34px,36px); margin-bottom:30px;}
+				p {@include font-size(22px,28px); margin-bottom:20px;
+					&:last-of-type {margin-bottom:40px;}
+				}
+				.cta {width:510px;
+					h3 {@include font-size(30px); margin-bottom:10px;}
+					img.freezerTest {@include image-size($image-freezer-test,500px); margin-bottom:20px;}
+					span {
+						&.ln1 {@include font-size(20px); margin-bottom:20px;}
+						&.ln3 {@include font-size(14px,18px); margin-bottom:20px;}
+						&.ln2 {@include font-size(14px,18px); right:80px; bottom:16px;}
+					}
+				}
+			}			
+			@include mobile_360 {
+				.container {padding-top:20px; padding-bottom:30px;}
+				h2 {@include font-size(22px,24px); margin-bottom:16px;}
+				p {@include font-size(14px,18px); margin-bottom:16px;
+					&:last-of-type {margin-bottom:20px;}
+				}
+				.cta {width:330px;
+					h3 {@include font-size(22px); margin-bottom:2px;}
+					img.freezerTest {@include image-size($image-freezer-test,330px); margin-bottom:6px;}
+					span {
+						&.ln1 {@include font-size(14px); margin-bottom:10px;}
+						&.ln3 {@include font-size(12px,16px); margin-bottom:20px;}
+						&.ln2 {@include font-size(10px); right:44px; bottom:12px;}
+					}
+				}
+			}
+			
+		}
+		
+		// Section: 60-Day Guarantee
+		#guarantee {
+			& {background-color:$color-green;}
+			* {@include center-horizontal(); text-align:center; color:#fff;}
+			h2 {@include font('MontserratSemiBold');}
+			p {@include font('MontserratMedium');}
+			
+			@include desktop_1280 {
+				.container {padding:40px 10px;}
+				h2 {@include font-size(46px); margin-bottom:20px;}
+				p {@include font-size(32px,40px); width:830px;}
+			}
+			@include desktop_1024 {
+				.container {padding:34px 10px;}
+				h2 {@include font-size(38px); margin-bottom:14px;}
+				p {@include font-size(26px,32px); width:700px;}
+			}
+			@include tablet {
+				.container {padding-top:40px; padding-bottom:50px;}
+				h2 {@include font-size(48px,52px); margin-bottom:14px;}
+				p {@include font-size(32px,40px);}
+			}
+			@include mobile_540 {
+				.container {padding-top:24px; padding-bottom:30px;}
+				h2 {@include font-size(34px,36px); margin-bottom:16px;}
+				p {@include font-size(22px,28px);}
+			}
+			@include mobile_360 {
+				.container {padding-top:20px; padding-bottom:20px;}
+				h2 {@include font-size(22px,24px); margin-bottom:6px;}
+				p {@include font-size(16px,18px);}
+			}
+			
+		}
+		
+		// Section: Developed by Scientists
+		#scientists {
+			* {@include center-horizontal(); text-align:center;}
+			h2 {@include font('MontserratSemiBold'); color:$color-green;}
+			p {@include font('MontserratMedium'); color:#000;
+				&:last-of-type {margin-bottom:0px;}
+			}
+			
+			@include desktop_1280 {
+				.container {padding:40px 10px 60px;}
+				h2 {@include font-size(42px); margin-bottom:20px;}
+				img.seal {@include image-size($image-icon-yale,300px); margin-bottom:40px;}
+				p {@include font-size(26px,32px); margin-bottom:20px;}
+			}
+			@include desktop_1024 {
+				.container {padding:34px 10px 40px;}
+				h2 {@include font-size(34px); margin-bottom:14px;}
+				img.seal {@include image-size($image-icon-yale,240px); margin-bottom:30px;}
+				p {@include font-size(20px,26px); margin-bottom:20px;}
+			}
+			@include tablet {
+				.container {padding-top:40px; padding-bottom:60px;}
+				h2 {@include font-size(46px,50px); margin-bottom:30px;}
+				img.seal {@include image-size($image-icon-yale,400px); margin-bottom:30px;}
+				p {@include font-size(30px,40px); letter-spacing:-0.01em; margin-bottom:30px;}
+			}
+			@include mobile_540 {
+				.container {padding-top:30px; padding-bottom:30px;}
+				h2 {@include font-size(32px,34px); margin-bottom:20px;}
+				img.seal {@include image-size($image-icon-yale,280px); margin-bottom:20px;}
+				p {@include font-size(20px,26px); margin-bottom:30px;}
+			}
+			@include mobile_360 {
+				.container {padding-top:20px; padding-bottom:20px;}
+				h2 {@include font-size(20px,24px); margin-bottom:10px;}
+				img.seal {@include image-size($image-icon-yale,180px); margin-bottom:10px;}
+				p {@include font-size(14px,18px); letter-spacing:-0.01em; margin-bottom:20px;}
+			}
+			
+		}
+		
+		// Section: Doctors
+		#doctors {
+			& {background-color:#f2f2f2;}
+			h2 {@include font('MontserratSemiBold'); color:#000; text-transform:uppercase; @include center-horizontal(); text-align:center;}
+			.flexcolumn {
+				.column {
+					&:nth-of-type(1){position:relative; background-color:#fff;
+						img {position:absolute;}
+					}
+					&:nth-of-type(2){
+						h3 {@include font('MontserratSemiBold'); color:#000; font-style:italic;}
+						p, span.person {@include font('MontserratMedium'); color:#000; display:block;}
+					}
+				}
+			}
+			@include desktop {
+				.column:nth-of-type(1) img {bottom:0px; left:0px; right:0px;}
+			}
+			@include desktop_1280 {
+				.container {padding:40px 0 90px;}
+				h2 {@include font-size(54px); margin-bottom:40px;}
+				.flexcolumn {padding:0 10px;
+					.column {
+						&:nth-of-type(1){width:550px;
+							img {@include image-size($image-doctor-maroon,550px);}
+						}
+						&:nth-of-type(2){width:620px; margin-right:20px; padding-top:30px;
+							h3 {@include font-size(26px,36px); margin-bottom:30px;}
+							span.person {@include font-size(24px); margin-bottom:30px;}
+							p {@include font-size(24px,28px); margin-bottom:30px;}
+							img.logo {@include image-size($image-doctor-logo,450px); margin-left:40px; margin-bottom:30px;}
+						}
+					}
+				}	
+			}
+			@include desktop_1024 {
+				.container {padding:34px 0 70px;}
+				h2 {@include font-size(44px); margin-bottom:34px;}
+				.flexcolumn {padding:0 10px;
+					.column {
+						&:nth-of-type(1){width:440px;
+							img {@include image-size($image-doctor-maroon,440px);}
+						}
+						&:nth-of-type(2){width:480px; margin-right:20px; padding-top:20px;
+							h3 {@include font-size(20px,30px); margin-bottom:20px;}
+							span.person {@include font-size(18px); margin-bottom:20px;}
+							p {@include font-size(18px,24px); margin-bottom:20px;}
+							img.logo {@include image-size($image-doctor-logo,360px); margin-left:40px; margin-bottom:30px;}
+						}
+					}
+				}	
+			}
+			@include tablet_down {
+				.column {
+					&:nth-of-type(1){overflow:hidden; width:750px; margin-left:-20px; margin-right:-20px;}
+					&:nth-of-type(2) > * {@include center-horizontal(); text-align:center;}
+				}
+			}
+			@include tablet {
+				.container {padding-top:50px; padding-bottom:90px;}
+				h2 {@include font-size(44px); margin-bottom:34px;}
+				.column {
+					&:nth-of-type(1){height:480px; margin-bottom:70px;
+						img {@include image-size($image-doctor-maroon,440px); left:155px; bottom:-60px;}
+					}
+					&:nth-of-type(2){
+						h3 {@include font-size(30px,40px); margin-bottom:40px;}
+						span.person {@include font-size(28px); margin-bottom:20px;}
+						p {@include font-size(28px,40px); max-width:700px; margin-bottom:80px;}
+						img.logo {@include image-size($image-doctor-logo,600px); margin-bottom:60px;}
+					}
+				}	
+			}		
+			@include mobile_540 {
+				.container {padding-top:30px; padding-bottom:60px;}
+				h2 {@include font-size(34px); margin-bottom:20px;}
+				.column {
+					&:nth-of-type(1){height:350px; margin-bottom:50px;
+						img {@include image-size($image-doctor-maroon,340px); left:calc((100vw - 340px) / 2); bottom:-40px;}
+					}
+					&:nth-of-type(2){
+						h3 {@include font-size(21px,28px); margin-bottom:40px;}
+						span.person {@include font-size(20px); margin-bottom:10px;}
+						p {@include font-size(20px,28px); max-width:480px; margin-bottom:40px;}
+						img.logo {@include image-size($image-doctor-logo,410px); margin-bottom:40px;}
+					}
+				}	
+			}			
+			@include mobile_360 {
+				.container {padding-top:20px; padding-bottom:40px;}
+				h2 {@include font-size(22px); margin-bottom:20px;}
+				.column {
+					&:nth-of-type(1){height:230px; margin-bottom:30px;
+						img {@include image-size($image-doctor-maroon,220px); left:calc((100vw - 220px) / 2); bottom:-30px;}
+					}
+					&:nth-of-type(2){
+						h3 {@include font-size(14px,18px); margin-bottom:20px;}
+						span.person {@include font-size(14px); margin-bottom:6px;}
+						p {@include font-size(14px,18px); max-width:330px; margin-bottom:20px;}
+						img.logo {@include image-size($image-doctor-logo,280px); margin-bottom:20px;}
+					}
+				}	
+			}
+			
+		}
+			
+	}
+}

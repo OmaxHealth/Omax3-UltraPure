@@ -1,0 +1,214 @@
+// Spanish Language Override
+#lang_spanish { 
+	
+	// Global: Buttons
+	.button {
+		@include desktop_1280 {
+			span {@include button-text(28px);}
+		}
+		@include desktop_1024 {
+			span {@include button-text(22px);}
+		}
+		@include tablet {
+			span {@include button-text(44px);}
+		}
+		@include mobile_540 {
+			span {@include button-text(30px);}
+		}
+		@include mobile_360 {
+			span {@include button-text(18px);}
+		}
+	}
+
+	// Global: Top Navigation
+	header {
+		@include desktop_1280 {
+			.tagline {top:32px; @include font-size(30px);}
+		}
+		@include desktop_1024 {
+			.tagline {top:30px; @include font-size(24px);}
+		}
+		@include tablet {
+			a.logo {top:26px; @include image-size($image-logo-header,140px);}
+			.tagline {top:32px; left:180px; width:350px; @include font-size(16px);}
+			.cta .button span {@include button-text(22px);}
+		}
+		@include mobile {
+			a.logo {top:18px; @include image-size($image-logo-header,100px);}
+			.tagline {width:260px; margin-top:20px;}
+			.cta .button span {@include button-text(14px);}
+		}
+	}
+	
+	// Global: Footer
+	footer {
+		@include desktop_1024 {
+			p.disclaimer {max-width:950px;}
+		}
+		@include tablet {
+			p.disclaimer {max-width:700px;}
+		}
+		@include mobile_360 {
+			nav {max-width:330px;
+				a {display:block; margin-bottom:5px;
+					&:after {display:none;}
+				}
+			}
+		}		
+	}
+	
+	// Page: Home
+	&.page-home {
+		main {
+			// Section: Hero
+			#hero {
+				@include desktop {
+					h1 {position:absolute; left:0px; right:0px; text-align:center; padding:0 10px; margin:0px; z-index:5;
+						small {display:block;}
+					}
+				}
+				@include desktop_1280 {
+					h1 {top:10px;
+						small {margin-top:-5px;}
+					}
+					.cta {top:120px;
+						ul {margin-bottom:20px;
+							li {@include font-size(20px,24px); margin-bottom:18px;
+								&:last-of-type {@include font-size(24px);}
+							}
+						}
+					}
+				}
+				@include desktop_1024 {
+					h1 {top:10px;
+						small {margin-top:-5px;}
+					}
+					.cta {top:90px;
+						ul {
+							li {@include font-size(17px,22px); margin-bottom:12px;
+								&:before {top:4px; @include image-size($image-hero-bullet,14px);}
+								&:last-of-type {@include font-size(20px);}
+							}
+						}
+					}
+				}
+				@include tablet {
+					h1 {@include font-size(46px); top:25px;
+						small {@include font-size(40px); top:50px;}
+					}					
+				}
+				@include mobile_540 {
+					h1 {@include font-size(32px);
+						small {@include font-size(24px); top:40px;}
+					}
+				}
+				@include mobile_360 {
+					h1 {@include font-size(21px); top:14px;
+						small {@include font-size(17px); top:24px;}
+					}					
+				}			
+			}	
+			
+			// Section: Quotes
+			#quotes {	
+				@include desktop_1280 {
+					h2 {@include font-size(46px);}
+				}
+				@include desktop_1024 {
+					h2 {@include font-size(38px);}
+				}
+			}
+			
+			// Section: Freezer Test	
+			#freezer {
+				@include desktop_1280 {
+					h2 {max-width:1000px;}
+					.cta {
+						span.ln1 {@include font-size(26px); letter-spacing:-0.01em;}
+						span.ln2 {@include font-size(18px,16px); width:180px; right:106px; bottom:30px;}
+						span.ln3 {max-width:700px;}
+					}
+				}
+				@include desktop_1024 {
+					h2 {max-width:800px;}
+					.cta {
+						span.ln1 {@include font-size(20px); letter-spacing:-0.01em;}
+						span.ln2 {@include font-size(14px,12px); width:150px; right:82px; bottom:26px;}
+					}
+				}
+				@include tablet {
+					h2 {@include font-size(40px,42px);}
+					.cta {
+						span.ln1 {@include font-size(22px); letter-spacing:-0.01em;}
+						span.ln2 {@include font-size(16px,14px); width:160px; right:94px; bottom:26px;}
+						span.ln3 {max-width:600px;}
+					}
+				}
+				@include mobile_540 {
+					h2 {@include font-size(28px,32px);}
+					.cta {
+						span.ln1 {@include font-size(16px); letter-spacing:-0.01em;}
+						span.ln2 {@include font-size(12px,11px); width:110px; right:80px; bottom:14px;}
+					}
+				}			
+				@include mobile_360 {
+					h2 {@include font-size(20px,24px); letter-spacing:-0.03em;}
+					.cta {
+						span.ln1 {@include font-size(11px); letter-spacing:-0.03em; margin-bottom:10px;}
+						span.ln2 {@include font-size(9px,8px); width:80px; right:42px; bottom:10px;}
+					}
+				}
+			}
+			
+			// Section: 60-Day Guarantee
+			#guarantee {
+				@include tablet {
+					p {@include font-size(30px,40px);}
+				}
+				@include mobile_540 {
+					p {@include font-size(20px,26px);}
+				}
+				@include mobile_360 {
+					h2 {max-width:330px;}
+					p {@include font-size(14px,16px);}
+				}
+			}
+			
+			// Section: Developed by Scientists
+			#scientists {				
+				@include desktop_1280 {
+					h2 {@include font-size(40px); letter-spacing:-0.02em;}
+				}
+				@include desktop_1024 {
+					h2 {@include font-size(30px);}
+				}
+				@include tablet {
+					h2 {@include font-size(40px,46px);}
+				}
+				@include mobile_540 {
+					h2 {@include font-size(30px,34px); max-width:510px;}
+				}
+				@include mobile_360 {
+					h2 {@include font-size(18px,24px); letter-spacing:-0.01em; max-width:330px;}
+				}
+			}
+			
+			// Section: Doctors
+			#doctors {
+				@include tablet {
+					h2 {@include font-size(40px); letter-spacing:-0.02em;}
+				}		
+				@include mobile_540 {
+					h2 {max-width:510px;}
+					h3 {@include font-size(20px,28px); letter-spacing:-0.02em;}
+				}			
+				@include mobile_360 {
+					h2 {max-width:330px;}
+					h3 {@include font-size(13px,18px); letter-spacing:-0.02em;}
+				}				
+			}
+				
+		}
+	}
+
+}
