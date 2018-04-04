@@ -2,9 +2,19 @@ module.exports = function(grunt) {
 	
 	// Clean Time Output
 	require('time-grunt')(grunt);
-	
-	// Global: Defines the location of the HTML build folder
-	var html_source_folder = "../html-template";
+
+	// Global: Defines which page we are building via 'site=' parameter
+	var site = grunt.option('site');
+	if (site == undefined){
+		grunt.fail.fatal("You need to pass a --site= parameter with the task.");
+	} else {
+		var html_source_folder = "../html-"+site;
+		if (grunt.file.exists(html_source_folder+'/sass/main.scss')){
+			console.log("Grunt will compile the files within the site folder: /"+html_source_folder+"/");
+		} else {
+			grunt.fail.fatal("The file main.scss doesn't exists for the site provided.");
+		}
+	}
 
 	// Global Project Config
 	grunt.initConfig({
