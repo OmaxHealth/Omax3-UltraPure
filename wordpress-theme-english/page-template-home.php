@@ -16,7 +16,7 @@
 					<li>Individually blister packed for freshness (no fishy burps!)</li>
 					<li>Free Shipping & 60-Day Money Back Guarantee*</li>
 				</ul>
-				<a class="button" href="#"><span>Order Now</span></a>					
+				<a class="button" href="https://tryomax3.com/cart/buybutton.php?id=xG1vAaL5S0alpTXwT7MXEg"><span>Order Now</span></a>					
 			</div>
 		</div>
 	</section>
@@ -58,7 +58,7 @@
 					<span class="ln2">The top selling<br/>fish oil brand*</span>
 				</div>
 				<span class="ln3">*Compared to the top three selling<br/>fish oil supplements rated by IRI, 52-wk, Aug-16.</span>
-				<a class="button" href="#"><span>Order Now</span></a>
+				<a class="button" href="https://tryomax3.com/cart/buybutton.php?id=xG1vAaL5S0alpTXwT7MXEg"><span>Order Now</span></a>
 			</div>
 		</div>
 	</section>
@@ -91,7 +91,7 @@
 					<span class="person">-Dr. Joseph Maroon</span>
 					<p>Neuro-Surgeon, Nutritional Expert, Tri-athelete, and author of the book &ldquo;Fish-Oil-The Natural Anti-Inflammatory&rdquo;</p>
 					<img class="logo" src="<?php bloginfo('template_directory'); ?>/images/doctor-logo.jpg" alt="Patented Formula"/>
-					<a class="button" href="#"><span>Order Now</span></a>						
+					<a class="button" href="https://tryomax3.com/cart/buybutton.php?id=xG1vAaL5S0alpTXwT7MXEg"><span>Order Now</span></a>						
 				</div>
 			</div>
 		</div>

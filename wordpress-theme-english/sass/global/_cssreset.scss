@@ -83,7 +83,7 @@ select {background:url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1
 button, input, select, textarea {margin:0;}
 
 // Safari/Chrome Font Normalization
-html,body {-webkit-text-size-adjust:none; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;}
+html,body {-webkit-text-size-adjust:none; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; font-variant-ligatures:none;}
 
 // Safari/Chrome Mobile Outlines
 html,body {
