@@ -4,7 +4,7 @@
 <main>
 	<section id="hero">
 		<div class="container">
-			<h1>Buy 1 Box, Get 1 Free <small>Plus 3 Free Gifts + Free Shipping</small></h1>
+			<h1>Buy 1 Box, Get 1 Free <small>Plus 3 Free Gifts + Free Shipping<span style="font-size: 15px;vertical-align:text-top;">&#8224;</span></small></h1>
 			<img class="product" src="<?php bloginfo('template_directory'); ?>/images/hero-product.png"/>
 			<img class="asot" src="<?php bloginfo('template_directory'); ?>/images/icon-asot.png" alt="As Seen on TV"/>
 			<div class="cta">
@@ -14,9 +14,9 @@
 					<li>Patented formula with 4X EPA to target inflammation & muscle recovery</li>
 					<li>High potency, 93.9% pure omega-3 supports heart, joints, muscles & mind</li>
 					<li>Individually blister packed for freshness (no fishy burps!)</li>
-					<li>Free Shipping & 60-Day Money Back Guarantee*</li>
+					<li>Free Shipping & 60-Day Money Back Guarantee<span style="font-size: 15px;vertical-align:text-top;">&#8224;</span></li>
 				</ul>
-				<a class="button" href="https://tryomax3.com/cart/buybutton.php?id=xG1vAaL5S0alpTXwT7MXEg"><span>Order Now</span></a>					
+				<a class="button" href="https://tryomax3.com/cart/buybutton.php?id=oln8sSHQ1kuszMn-2Nn9wQ"><span>Order Now</span></a>					
 			</div>
 		</div>
 	</section>
@@ -38,7 +38,7 @@
 				<div class="column">
 					<img src="<?php bloginfo('template_directory'); ?>/images/quote-person3.jpg"/>
 					<h3>Dr. Joseph Maroon Reveals his Anti-aging Secret!</h3>
-					<p>&ldquo;At age 74, my joints ached. I found Omax3&reg; essential in keeping my body limber and pain free. It also supports my brain, keeping me sharp and focused. It is my secret weapon to defying my age as I just completed my 5th Iron Man in Hawaii and have never felt better!&rdquo;*</p>
+					<p>&ldquo;At age 74, my joints ached. I found Omax3&reg; essential in keeping my body limber and pain free. It also supports my brain, keeping me sharp and focused. It is my secret weapon to defying my age as I just completed my 5th Iron Man in Hawaii and have never felt better!&rdquo;**</p>
 				</div>
 			</div>
 		</div>
@@ -58,7 +58,7 @@
 					<span class="ln2">The top selling<br/>fish oil brand*</span>
 				</div>
 				<span class="ln3">*Compared to the top three selling<br/>fish oil supplements rated by IRI, 52-wk, Aug-16.</span>
-				<a class="button" href="https://tryomax3.com/cart/buybutton.php?id=xG1vAaL5S0alpTXwT7MXEg"><span>Order Now</span></a>
+				<a class="button" href="https://tryomax3.com/cart/buybutton.php?id=oln8sSHQ1kuszMn-2Nn9wQ"><span>Order Now</span></a>
 			</div>
 		</div>
 	</section>
@@ -66,7 +66,7 @@
 	<section id="guarantee">
 		<div class="container">
 			<h2>60-Day Money-Back Guarantee</h2>
-			<p>Try Omax3&reg; for 60 days! If you're not satisfied, we don't expect you to pay!*</p>
+			<p>Try Omax3&reg; for 60 days! If you're not satisfied, we don't expect you to pay!<span style="font-size: 15px;vertical-align:text-top;display:inline-block;">&#8224;</span></p>
 		</div>
 	</section>
 	
@@ -91,7 +91,7 @@
 					<span class="person">-Dr. Joseph Maroon</span>
 					<p>Neuro-Surgeon, Nutritional Expert, Tri-athelete, and author of the book &ldquo;Fish-Oil-The Natural Anti-Inflammatory&rdquo;</p>
 					<img class="logo" src="<?php bloginfo('template_directory'); ?>/images/doctor-logo.jpg" alt="Patented Formula"/>
-					<a class="button" href="https://tryomax3.com/cart/buybutton.php?id=xG1vAaL5S0alpTXwT7MXEg"><span>Order Now</span></a>						
+					<a class="button" href="https://tryomax3.com/cart/buybutton.php?id=oln8sSHQ1kuszMn-2Nn9wQ"><span>Order Now</span></a>						
 				</div>
 			</div>
 		</div>

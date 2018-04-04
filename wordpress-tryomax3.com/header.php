@@ -25,8 +25,8 @@
 		<a class="logo" href="<?php bloginfo('url'); ?>"><span>OMax3</span></a>
 		<span class="tagline">Support heart, cognition & inflammation in 30-days or less!</span>
 		<div class="cta">
-			<a class="phone" href="tel:18009180394">1-800-918-0394</a>
-			<a class="button" href="https://tryomax3.com/cart/buybutton.php?id=xG1vAaL5S0alpTXwT7MXEg"><span>Order Now</span></a>
+			<a class="phone" href="tel:18004571773">1-800-457-1773</a>
+			<a class="button" href="https://tryomax3.com/cart/buybutton.php?id=oln8sSHQ1kuszMn-2Nn9wQ"><span>Order Now</span></a>
 		</div>
 	</div>
 </header>
