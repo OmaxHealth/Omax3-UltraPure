@@ -1,0 +1,2 @@
+@media only print{.portfolio_print,.title_outer,footer,header,header.page_header{display:none!important}.container_inner{max-width:80%}div[class*=columns]>div[class^=column]{float:none;width:100%}.container-inner,.wrapper,.wrapper-inner .container,body,html{padding-top:0!important;margin-top:0!important;top:0!important}}
+/*# sourceMappingURL=bridge-print.min.css.map */
