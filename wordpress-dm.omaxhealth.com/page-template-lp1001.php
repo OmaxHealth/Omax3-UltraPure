@@ -18,7 +18,7 @@
 		<div class="wrapper">
 			<div class="logo"><img src="<?php bloginfo('template_directory'); ?>/images/omax3-logo.png" alt="Omax3 Logo"></div>
 			<div class="get-started">
-				<a href="https://dm.omaxhealth.com/cart/buybutton.php?id=FYwJhHn5ski702gY7HS50Q">Order Now</a>
+				<a href="<?php bloginfo('url'); ?>/select-your-plan/">Order Now</a>
 			</div>
 		</div>
 	</div>
@@ -35,7 +35,7 @@
           <h3>Get Your First Box for $19.95*</span></h3>
           <p class="tablet-desktop">Discover Omax3, the 93.9% pure omega-3 supplement developed by Yale-affiliated scientists. Patented formula with 4X EPA to target inflammation, joint pain, & muscle recovery. No fishy burps!</p>
         <p class="mobile-only">Discover Omax3, the 93.9% pure omega-3 supplement developed by Yale-affiliated scientists.</p>
-          <a href="https://dm.omaxhealth.com/cart/buybutton.php?id=FYwJhHn5ski702gY7HS50Q" class="orange-btn" rel="nofollow">Get Started</a>
+          <a href="<?php bloginfo('url'); ?>/select-your-plan/" class="orange-btn" rel="nofollow">Get Started</a>
         </div>
         <div class="mobile-bg"></div>
       </div>
@@ -77,7 +77,7 @@
           <p>After the first 30 days, get a fresh 60-day supply of Omax3 at 20% off and free shipping.</p>
         </div>
       </div>
-      <a href="https://dm.omaxhealth.com/cart/buybutton.php?id=FYwJhHn5ski702gY7HS50Q" class="orange-btn" rel="nofollow">Get Started</a>
+      <a href="<?php bloginfo('url'); ?>/select-your-plan/" class="orange-btn" rel="nofollow">Get Started</a>
     </section>
     <section class="green-info">
       <div class="wrapper">
@@ -106,7 +106,7 @@
         </div>
       </div>
       <div class="wrapper">
-        <a href="https://dm.omaxhealth.com/cart/buybutton.php?id=FYwJhHn5ski702gY7HS50Q" class="orange-btn" rel="nofollow">Order Now</a>
+        <a href="<?php bloginfo('url'); ?>/select-your-plan/" class="orange-btn" rel="nofollow">Order Now</a>
       </div>
     </section>
     <section class="safely-tested">
@@ -280,7 +280,7 @@
       <div class="wrapper">
         <h3>Power Your Body with Omax-3 Ultra-Pure.</h3>
         <p>Get Your First Box for $19.95 + Free Shipping*</p>
-        <a href="https://dm.omaxhealth.com/cart/buybutton.php?id=FYwJhHn5ski702gY7HS50Q" class="orange-btn" rel="nofollow">Get Started</a>
+        <a href="<?php bloginfo('url'); ?>/select-your-plan/" class="orange-btn" rel="nofollow">Get Started</a>
       </div>
     </section>
       </main>

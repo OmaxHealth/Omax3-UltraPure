@@ -36,7 +36,14 @@
 ?>
 
 <header>
-	<div class="container">
-		<a href="<?php echo $link; ?>"><img src="<?php bloginfo('template_directory'); ?>/images/omax_logo_trans-ret-1024x294.png" class="header-title"/></a>
-	</div>  
+	<div class="upper">
+		<div class="container">
+			<!-- Empty -->
+		</div>
+	</div>
+	<div class="lower">
+		<div class="container">
+			<a class="logo" href="<?php echo $link; ?>"><img src="<?php bloginfo('template_directory'); ?>/images/omax_logo_trans-ret-1024x294.png" alt="Omax3 Logo"></a>
+		</div>
+	</div>
 </header>

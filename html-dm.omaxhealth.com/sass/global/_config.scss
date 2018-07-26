@@ -28,13 +28,23 @@ $color-green: #82A53F;
 		@content;
 	}
 }
+@mixin mobile_510 {
+	@media (min-width:510px) and (max-width:767px){
+		@content;
+	}
+}
+@mixin mobile_360 {
+	@media (max-width:509px){
+		@content;
+	}
+}
 
 // Container Widths
 @include desktop {
 	.container {width:1000px!important;}
 }
 @include tablet {
-	.container {width:750px!important;}
+	.container {width:750px!important; padding-left:20px; padding-right:20px;}
 }
 @include mobile {
 	.container {width:100%!important; min-width:360px; overflow-x:hidden; padding-left:15px; padding-right:15px;}
@@ -68,10 +78,6 @@ $color-green: #82A53F;
 	// Assigns the Font Family
 	@if (str-index($font,'Montserrat')) {
 		font-family:'Montserrat',Helvetica,Arial,sans-serif; font-style:normal;
-	} @else if (str-index($font,'Oswald')) {
-		font-family:'Oswald',Helvetica,Arial,sans-serif; font-style:normal;
-	} @else if (str-index($font,'Roboto')) {
-		font-family:'Roboto Condensed',Helvetica,Arial,sans-serif; font-style:normal;
 	} @else {
 		font-family:'Helvetica Neue',Helvetica,Arial,sans-serif; font-style:normal;
 	}

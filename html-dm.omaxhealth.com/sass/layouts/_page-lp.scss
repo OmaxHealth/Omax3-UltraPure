@@ -14,21 +14,57 @@
       width: 100%;
       height: 36px;
       position: relative;  
-	  margin-bottom: 12px;          
+	  margin-bottom: 12px;
+    @media (max-width:1024px) {
+      display: block;
+    }          
       .overlay-content{
         margin-left:auto;
         margin-right:auto;
         max-width:942px;
         height:36px;
-        text-align:center;
-		color: #fff;
-    	font-size: 15px;
-		padding-top: 4px;
-		font-weight: 500;
+        text-align:left;
+		    color: #fff;
+    	  font-size: 15px;
+    		padding-top: 4px;
+    		font-weight: 500;
+            .left {
+            color: #fff;
+            }
+            .right {
+            color: #fff;
+            a {
+              text-decoration: none!important;
+              font-style: normal!important;
+              color: #fff!important;
+            }
+            }
+            @media (min-width:1024px) {
+      max-width: 1000px;
+      .left {
+          float: left;
+      }
+      .right {
+          float: right;
+      }
+    }
+    @media (max-width:1024px) {
+      text-align: center;
+      .left {
+          display: none;
+      }
+    }
+
 	  }
-	  @media (max-width: 769px){
-		display: none;
-		}
+    .trustpilot-widget {
+      display: inline;
+      float: right;
+      top: 10px;
+      right: -42px;
+      @media (max-width:1024px) {
+        display: none;
+      }
+    }
     }
     .nav-wrapper{
       .wrapper{
@@ -69,6 +105,7 @@
           margin-left: auto;
         }
         a{
+	       &:hover {background-color:#dd821f;}
           background:rgba(251,154,36,1);
           color: #fff;
           padding: 8px;
@@ -145,6 +182,10 @@
         line-height: 1.1em;
         text-align: center;
         color: #000;
+        .asterisk {
+          font-size: 24px;
+          position: absolute;
+        }
         @media (min-width: 1024px){
           text-align: left;
           font-weight: 500;
@@ -173,6 +214,7 @@
         }
       }
       .orange-btn{
+	      &:hover {background-color:#dd821f;}
         background:rgba(251,154,36,1);
         color: #fff;
         padding: 16px;
@@ -437,6 +479,7 @@
       }
     }
     .orange-btn{
+	    &:hover {background-color:#dd821f;}
       background:rgba(251,154,36,1);
       color: #fff;
       padding: 16px;
@@ -518,6 +561,7 @@
       }
     }
     .orange-btn{
+	    &:hover {background-color:#dd821f;}
       background:rgba(251,154,36,1);
       color: #fff;
       padding: 16px;
@@ -718,6 +762,7 @@
       }
     }
     .orange-btn{
+	    &:hover {background-color:#dd821f;}
       background:rgba(251,154,36,1);
       color: #fff;
       padding: 16px;
@@ -787,7 +832,7 @@
       padding-top: 60px;
       padding-left: 30px;
       padding-right: 30px;
-      padding-bottom: 60px;
+      padding-bottom: 0;
     }
     @media (min-width: 1024px){
       max-width: 1024px;
@@ -1248,6 +1293,36 @@
       }
     }
   }
+  // Section: Trustpilot
+  .trustpilot {
+    padding: 30px 0;
+    background: #f9f9f9;
+    @media (min-width: 768px){
+      padding: 60px 0;
+      margin-top: 30px;
+    }
+    @media (min-width: 1024px){
+      margin-bottom: -70px;
+      margin-top: 60px;
+    }
+    h3 {
+      display: none;
+      @media (min-width: 520px){
+        display: block;
+        font-size: 2em;
+        font-weight: 500;
+        color: #000;
+        text-transform: none;
+        text-align: center;
+        letter-spacing: 0;
+        letter-spacing: -1px;
+        margin-bottom: 40px;
+      }
+      @media (min-width: 768px){
+        font-size: 2.55em;
+      }
+    }
+  }
   .get-started-last{
     background: url('images/get-started-bg.jpg');
     background-size: cover;
@@ -1307,6 +1382,7 @@
       }
     }
     .orange-btn{
+	    &:hover {background-color:#dd821f;}
       background:rgba(251,154,36,1);
       color: #fff;
       padding: 16px;
@@ -1407,11 +1483,25 @@
         margin-top: 2.35em;
       }
     }
+    h2{
+      font-size: 1.5em;
+      font-weight: 500;
+      color: #fff;
+      line-height: 100%;
+      text-align: center;
+      margin-top: 1.25em;
+      padding: 0 5px;
+      line-height: 1.25em;
+      @media (min-width: 766px){
+        font-size: 2em;
+        margin-top: 1.4em;
+      }
+    }
   }
 }
 
 // LP1002 Styles
-#landing-page.page-template-lp1002 {
+#landing-page.page-lp1002 {
   #limited-bubble{
 	display:none;
     @media (min-width: 1024px){
@@ -1502,6 +1592,7 @@
         }
       }
       .orange-btn{
+	      &:hover {background-color:#dd821f;}
         background:rgba(251,154,36,1);
         color: #fff;
         padding: 16px;

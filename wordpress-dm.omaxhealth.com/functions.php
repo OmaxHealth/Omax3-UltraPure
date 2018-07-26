@@ -39,6 +39,10 @@ function force_page_template($template){
 		$new_template = locate_template(array('page-template-lp1003.php'));
 		if ('' != $new_template) {return $new_template;}
 	}
+	if (is_page('select-your-plan')){
+		$new_template = locate_template(array('page-template-select-your-plan.php'));
+		if ('' != $new_template) {return $new_template;}
+	}
 	if (is_page('terms-and-conditions')){
 		$new_template = locate_template(array('page-template-terms-and-conditions.php'));
 		if ('' != $new_template) {return $new_template;}
@@ -79,6 +83,7 @@ function hide_editor(){
 		if ($slug == 'lp1001'){$show_editor = false;}
 		if ($slug == 'lp1002'){$show_editor = false;}
 		if ($slug == 'lp1003'){$show_editor = false;}
+		if ($slug == 'select-your-plan'){$show_editor = false;}
 		if ($slug == 'terms-and-conditions'){$show_editor = false;}
 		if ($slug == 'privacy-policy'){$show_editor = false;}
 		if ($slug == 'contact-us'){$show_editor = false;}

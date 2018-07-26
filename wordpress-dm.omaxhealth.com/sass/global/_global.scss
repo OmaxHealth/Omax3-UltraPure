@@ -34,16 +34,24 @@ body {background-color:#fff!important; width:100%!important;
 	}
 }
 
-// Global: Header	
+// Global: Header
 header {
-	& {background-color:#ebebeb;}
-	img {@include center-horizontal();}
-	
-	@include desktop {
-		img {width:250px; padding:14px 0;}
+	.upper {position:relative; background-color:#599a12; color:#fff;}
+	.lower {position:relative; background-color:#ebebeb;
+		a.logo img {@include center-horizontal();}
 	}
-	@include tablet_down {
-		img {width:180px; padding:14px 0;}
+	
+	@include tablet_up {
+		.upper{height:36px;}
+		.lower {height:90px;
+			a.logo img {width:175px; height:50px; margin-top:20px;}
+		}			
+	}
+	@include mobile {
+		.upper {height:28px;}
+		.lower {height:70px;
+			a.logo img {width:140px; height:42px; margin-top:14px;}
+		}			
 	}
 }
 

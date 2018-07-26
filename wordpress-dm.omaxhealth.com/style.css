@@ -28,10 +28,15 @@ body * { font-family: Montserrat !important; color: #333; }
 @media (max-width: 1023px) { .flexcolumn, .flexcolumn > .container { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; }
   .flexcolumn .column, .flexcolumn > .container .column { width: 100%; } }
 
-header { background-color: #ebebeb; }
-header img { display: block; margin-left: auto; margin-right: auto; }
-@media (min-width: 1024px) { header img { width: 250px; padding: 14px 0; } }
-@media (max-width: 1023px) { header img { width: 180px; padding: 14px 0; } }
+header .upper { position: relative; background-color: #599a12; color: #fff; }
+header .lower { position: relative; background-color: #ebebeb; }
+header .lower a.logo img { display: block; margin-left: auto; margin-right: auto; }
+@media (min-width: 768px) { header .upper { height: 36px; }
+  header .lower { height: 90px; }
+  header .lower a.logo img { width: 175px; height: 50px; margin-top: 20px; } }
+@media (max-width: 767px) { header .upper { height: 28px; }
+  header .lower { height: 70px; }
+  header .lower a.logo img { width: 140px; height: 42px; margin-top: 14px; } }
 
 footer { background-color: #f2f2f2; text-align: center; }
 footer p { display: block; margin-left: auto; margin-right: auto; text-align: center; color: #000; font-weight: 400; font-size: 12px; line-height: 14px; margin-top: 0px; margin-bottom: 6px; }
@@ -475,6 +480,124 @@ footer .connect a:last-child { margin-right: 0; }
 @media (min-width: 666px) { #landing-page.page-lp1002 #masthead .mobile-bg { height: 112.55vh; } }
 @media (min-width: 768px) { #landing-page.page-lp1002 #masthead .mobile-bg { height: 540.62px; } }
 @media (min-width: 1024px) { #landing-page.page-lp1002 #masthead .mobile-bg { display: none; } }
+
+.page-select-your-plan .container { margin-bottom: 0px !important; }
+@media (min-width: 1140px) { .page-select-your-plan .container { width: 1120px !important; } }
+@media (min-width: 768px) and (max-width: 1139px) { .page-select-your-plan .container { width: 750px !important; } }
+.page-select-your-plan header .lower { background-color: #fff !important; }
+.page-select-your-plan #mainCTA { background-color: #f4f4f4; }
+.page-select-your-plan #mainCTA .headline h1 { font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 400; font-style: normal; color: #333; text-transform: uppercase; text-align: center; }
+.page-select-your-plan #mainCTA .flexbox .box { position: relative; background-color: #fff; -webkit-box-shadow: 0px 3px 11px 1px rgba(176, 176, 176, 0.5); box-shadow: 0px 3px 11px 1px rgba(176, 176, 176, 0.5); -webkit-box-sizing: border-box; box-sizing: border-box; }
+.page-select-your-plan #mainCTA .flexbox .box:nth-of-type(1) .productImage { background-image: url("images/choose-offer1.png"); }
+.page-select-your-plan #mainCTA .flexbox .box:nth-of-type(2):before { content: ""; position: absolute; background: url("images/best-value.png") top right no-repeat; background-size: 100% 100%; width: 150px; height: 200px; top: -13px; right: -10px; }
+.page-select-your-plan #mainCTA .flexbox .box:nth-of-type(2) .productImage { background-image: url("images/choose-offer2.png"); }
+.page-select-your-plan #mainCTA .flexbox .box * { display: block; margin-left: auto; margin-right: auto; text-align: center; }
+.page-select-your-plan #mainCTA .flexbox .box h2 { font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 300; font-style: normal; color: #000; text-transform: uppercase; text-align: center; }
+.page-select-your-plan #mainCTA .flexbox .box .priceGroup .price { font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 400; font-style: normal; color: #121313; text-align: center; }
+.page-select-your-plan #mainCTA .flexbox .box .priceGroup .price span { display: inline-block; font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 300; font-style: normal; color: #121313; }
+.page-select-your-plan #mainCTA .flexbox .box .priceGroup .supply { font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 300; font-style: normal; color: #000; }
+.page-select-your-plan #mainCTA .flexbox .box .priceGroup .shipping { display: inline-block; font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 500; font-style: normal; color: #0f1011; border-top: 1px solid #000; }
+.page-select-your-plan #mainCTA .flexbox .box .priceGroup hr { border: 0px; height: 1px; background: #000; }
+.page-select-your-plan #mainCTA .flexbox .box .giftGroup .gift { font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 500; font-style: normal; color: #589a12; }
+.page-select-your-plan #mainCTA .flexbox .box .giftGroup .check { font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 300; font-style: normal; color: #000; }
+.page-select-your-plan #mainCTA .flexbox .box .giftGroup .check span { display: inline-block; font-weight: bold; }
+.page-select-your-plan #mainCTA .flexbox .box .imageGroup { border-bottom: 1px solid #000; }
+.page-select-your-plan #mainCTA .flexbox .box .imageGroup .productImage { background-position: center center; background-repeat: no-repeat; background-size: 100% 100%; display: block; margin-left: auto; margin-right: auto; }
+.page-select-your-plan #mainCTA .flexbox .box .imageGroup .value { font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 400; font-style: normal; color: #100f0f; }
+.page-select-your-plan #mainCTA .flexbox .box .noteGroup .note { font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 300; font-style: normal; color: #000; }
+.page-select-your-plan #mainCTA .flexbox .box .button { background-color: #fb9a24; text-decoration: none; }
+.page-select-your-plan #mainCTA .flexbox .box .button:hover { background-color: #DD821F; }
+.page-select-your-plan #mainCTA .flexbox .box .button span { font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 600; font-style: normal; color: #fff; text-transform: uppercase; }
+@media (min-width: 1140px) { .page-select-your-plan #mainCTA .headline h1 { font-size: 48px; line-height: 48px; margin: 80px auto 50px; }
+  .page-select-your-plan #mainCTA .flexbox { margin-bottom: 75px; }
+  .page-select-your-plan #mainCTA .flexbox .box { width: 500px; height: 870px; margin: 15px 15px 0; padding: 60px 40px 40px; }
+  .page-select-your-plan #mainCTA .flexbox .box h2 { font-size: 35px; line-height: 35px; letter-spacing: -0.02em; margin-bottom: 20px; }
+  .page-select-your-plan #mainCTA .flexbox .box .priceGroup { height: 170px; }
+  .page-select-your-plan #mainCTA .flexbox .box .priceGroup .price { font-size: 64px; line-height: 64px; margin-bottom: 5px; }
+  .page-select-your-plan #mainCTA .flexbox .box .priceGroup .price span { font-size: 28px; line-height: 28px; }
+  .page-select-your-plan #mainCTA .flexbox .box .priceGroup .supply { font-size: 18px; line-height: 18px; }
+  .page-select-your-plan #mainCTA .flexbox .box .priceGroup .shipping { font-size: 28px; line-height: 28px; padding-top: 10px; margin-top: 10px; }
+  .page-select-your-plan #mainCTA .flexbox .box .giftGroup .gift { font-size: 24px; line-height: 24px; margin-bottom: 5px; }
+  .page-select-your-plan #mainCTA .flexbox .box .giftGroup .check { font-size: 24px; line-height: 24px; }
+  .page-select-your-plan #mainCTA .flexbox .box .imageGroup { height: 320px; margin-bottom: 10px; }
+  .page-select-your-plan #mainCTA .flexbox .box .imageGroup .productImage { width: 350px; height: 250px; margin-top: 40px; margin-bottom: 20px; }
+  .page-select-your-plan #mainCTA .flexbox .box .imageGroup .value { font-size: 30px; line-height: 30px; }
+  .page-select-your-plan #mainCTA .flexbox .box .noteGroup { height: 70px; }
+  .page-select-your-plan #mainCTA .flexbox .box .noteGroup .note { font-size: 18px; line-height: 24px; }
+  .page-select-your-plan #mainCTA .flexbox .box .button { width: 240px; height: 60px; }
+  .page-select-your-plan #mainCTA .flexbox .box .button span { font-size: 20px; line-height: 60px; } }
+@media (min-width: 768px) and (max-width: 1139px) { .page-select-your-plan #mainCTA .headline h1 { font-size: 48px; line-height: 48px; margin: 60px auto 40px; }
+  .page-select-your-plan #mainCTA .flexbox { margin-bottom: 40px; }
+  .page-select-your-plan #mainCTA .flexbox .box { display: block; width: 500px; margin: 0 auto; padding: 60px 40px 40px; }
+  .page-select-your-plan #mainCTA .flexbox .box:nth-of-type(1) { -webkit-box-ordinal-group: 3; -ms-flex-order: 2; order: 2; }
+  .page-select-your-plan #mainCTA .flexbox .box:nth-of-type(2) { -webkit-box-ordinal-group: 2; -ms-flex-order: 1; order: 1; margin-top: 15px; margin-bottom: 40px !important; }
+  .page-select-your-plan #mainCTA .flexbox .box h2 { font-size: 35px; line-height: 35px; letter-spacing: -0.02em; margin-bottom: 20px; }
+  .page-select-your-plan #mainCTA .flexbox .box .priceGroup { margin-bottom: 40px; }
+  .page-select-your-plan #mainCTA .flexbox .box .priceGroup .price { font-size: 64px; line-height: 64px; margin-bottom: 5px; }
+  .page-select-your-plan #mainCTA .flexbox .box .priceGroup .price span { font-size: 28px; line-height: 28px; }
+  .page-select-your-plan #mainCTA .flexbox .box .priceGroup .supply { font-size: 18px; line-height: 18px; }
+  .page-select-your-plan #mainCTA .flexbox .box .priceGroup .shipping { font-size: 28px; line-height: 28px; padding-top: 10px; margin-top: 10px; }
+  .page-select-your-plan #mainCTA .flexbox .box .giftGroup .gift { font-size: 24px; line-height: 24px; margin-bottom: 5px; }
+  .page-select-your-plan #mainCTA .flexbox .box .giftGroup .check { font-size: 24px; line-height: 24px; }
+  .page-select-your-plan #mainCTA .flexbox .box .imageGroup { margin-bottom: 20px; }
+  .page-select-your-plan #mainCTA .flexbox .box .imageGroup .productImage { width: 350px; height: 250px; margin-top: 40px; margin-bottom: 20px; }
+  .page-select-your-plan #mainCTA .flexbox .box .imageGroup .value { font-size: 30px; line-height: 30px; margin-bottom: 20px; }
+  .page-select-your-plan #mainCTA .flexbox .box .noteGroup .note { font-size: 18px; line-height: 24px; margin-bottom: 20px; }
+  .page-select-your-plan #mainCTA .flexbox .box .button { width: 240px; height: 60px; }
+  .page-select-your-plan #mainCTA .flexbox .box .button span { font-size: 20px; line-height: 60px; } }
+@media (max-width: 767px) { .page-select-your-plan #mainCTA .flexbox .box { display: block; width: 90%; margin: 0 auto; }
+  .page-select-your-plan #mainCTA .flexbox .box:nth-of-type(1) { -webkit-box-ordinal-group: 3; -ms-flex-order: 2; order: 2; }
+  .page-select-your-plan #mainCTA .flexbox .box:nth-of-type(2) { -webkit-box-ordinal-group: 2; -ms-flex-order: 1; order: 1; } }
+@media (min-width: 510px) and (max-width: 767px) { .page-select-your-plan #mainCTA .headline h1 { font-size: 36px; line-height: 36px; margin: 40px auto 20px; }
+  .page-select-your-plan #mainCTA .flexbox { margin-bottom: 40px; }
+  .page-select-your-plan #mainCTA .flexbox .box { padding: 40px; max-width: 500px; }
+  .page-select-your-plan #mainCTA .flexbox .box:nth-of-type(2) { margin-top: 10px; margin-bottom: 40px !important; }
+  .page-select-your-plan #mainCTA .flexbox .box:nth-of-type(2):before { width: 100px; height: 133px; top: -9px; right: -7px; }
+  .page-select-your-plan #mainCTA .flexbox .box h2 { font-size: 32px; line-height: 32px; letter-spacing: -0.02em; margin-bottom: 20px; }
+  .page-select-your-plan #mainCTA .flexbox .box .priceGroup { margin-bottom: 20px; }
+  .page-select-your-plan #mainCTA .flexbox .box .priceGroup .price { font-size: 48px; line-height: 48px; }
+  .page-select-your-plan #mainCTA .flexbox .box .priceGroup .price span { font-size: 24px; line-height: 24px; }
+  .page-select-your-plan #mainCTA .flexbox .box .priceGroup .supply { font-size: 18px; line-height: 18px; }
+  .page-select-your-plan #mainCTA .flexbox .box .priceGroup .shipping { font-size: 24px; line-height: 24px; padding-top: 10px; margin-top: 10px; }
+  .page-select-your-plan #mainCTA .flexbox .box:nth-of-type(2) .priceGroup .price { margin-bottom: 10px; }
+  .page-select-your-plan #mainCTA .flexbox .box .giftGroup .gift { font-size: 22px; line-height: 22px; margin-bottom: 5px; }
+  .page-select-your-plan #mainCTA .flexbox .box .giftGroup .check { font-size: 22px; line-height: 22px; letter-spacing: -0.02em; }
+  .page-select-your-plan #mainCTA .flexbox .box .imageGroup { margin-bottom: 20px; }
+  .page-select-your-plan #mainCTA .flexbox .box .imageGroup .productImage { width: 350px; height: 250px; margin-top: 20px; margin-bottom: 20px; }
+  .page-select-your-plan #mainCTA .flexbox .box .imageGroup .value { font-size: 24px; line-height: 24px; margin-bottom: 15px; }
+  .page-select-your-plan #mainCTA .flexbox .box .noteGroup .note { font-size: 18px; line-height: 24px; margin-bottom: 15px; }
+  .page-select-your-plan #mainCTA .flexbox .box .button { width: 240px; height: 60px; }
+  .page-select-your-plan #mainCTA .flexbox .box .button span { font-size: 20px; line-height: 60px; } }
+@media (max-width: 509px) { .page-select-your-plan #mainCTA .headline h1 { font-size: 28px; line-height: 28px; margin: 40px auto 20px; }
+  .page-select-your-plan #mainCTA .flexbox { margin-bottom: 30px; }
+  .page-select-your-plan #mainCTA .flexbox .box { padding: 40px 20px 20px; }
+  .page-select-your-plan #mainCTA .flexbox .box:nth-of-type(2) { margin-top: 10px; margin-bottom: 30px !important; }
+  .page-select-your-plan #mainCTA .flexbox .box:nth-of-type(2):before { width: 75px; height: 100px; top: -6px; right: -5px; }
+  .page-select-your-plan #mainCTA .flexbox .box h2 { font-size: 24px; line-height: 24px; letter-spacing: -0.02em; margin-bottom: 20px; }
+  .page-select-your-plan #mainCTA .flexbox .box .priceGroup { margin-bottom: 20px; }
+  .page-select-your-plan #mainCTA .flexbox .box .priceGroup .price { font-size: 40px; line-height: 40px; }
+  .page-select-your-plan #mainCTA .flexbox .box .priceGroup .price span { font-size: 22px; line-height: 22px; }
+  .page-select-your-plan #mainCTA .flexbox .box .priceGroup .supply { font-size: 18px; line-height: 18px; }
+  .page-select-your-plan #mainCTA .flexbox .box .priceGroup .shipping { font-size: 22px; line-height: 22px; padding-top: 10px; margin-top: 10px; }
+  .page-select-your-plan #mainCTA .flexbox .box:nth-of-type(2) .priceGroup .price { margin-bottom: 8px; }
+  .page-select-your-plan #mainCTA .flexbox .box .giftGroup .gift { font-size: 20px; line-height: 20px; margin-bottom: 5px; }
+  .page-select-your-plan #mainCTA .flexbox .box .giftGroup .check { font-size: 18px; line-height: 18px; letter-spacing: -0.02em; }
+  .page-select-your-plan #mainCTA .flexbox .box .imageGroup { margin-bottom: 20px; }
+  .page-select-your-plan #mainCTA .flexbox .box .imageGroup .productImage { width: 250px; height: 178px; margin-top: 20px; margin-bottom: 20px; }
+  .page-select-your-plan #mainCTA .flexbox .box .imageGroup .value { font-size: 24px; line-height: 24px; margin-bottom: 15px; }
+  .page-select-your-plan #mainCTA .flexbox .box .noteGroup .note { font-size: 16px; line-height: 20px; margin-bottom: 15px; }
+  .page-select-your-plan #mainCTA .flexbox .box .button { width: 240px; height: 60px; }
+  .page-select-your-plan #mainCTA .flexbox .box .button span { font-size: 20px; line-height: 60px; } }
+.page-select-your-plan #lowerTagline { background-color: #589a12; }
+.page-select-your-plan #lowerTagline h2 { font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 400; font-style: normal; letter-spacing: -0.01em; color: #fff; text-transform: uppercase; text-align: center; position: relative; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); }
+@media (min-width: 1140px) { .page-select-your-plan #lowerTagline .container { height: 160px; }
+  .page-select-your-plan #lowerTagline .container h2 { font-size: 38px; line-height: 38px; } }
+@media (min-width: 768px) and (max-width: 1139px) { .page-select-your-plan #lowerTagline .container { height: 160px; max-width: 650px; }
+  .page-select-your-plan #lowerTagline .container h2 { font-size: 34px; line-height: 34px; } }
+@media (min-width: 510px) and (max-width: 767px) { .page-select-your-plan #lowerTagline .container { height: 120px; max-width: 450px; }
+  .page-select-your-plan #lowerTagline .container h2 { font-size: 28px; line-height: 28px; } }
+@media (max-width: 509px) { .page-select-your-plan #lowerTagline .container { height: 100px; max-width: 330px; }
+  .page-select-your-plan #lowerTagline .container h2 { font-size: 24px; line-height: 24px; } }
 
 main#legal h1 { font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 400; font-style: normal; color: #000; text-align: center; display: block; margin-left: auto; margin-right: auto; }
 main#legal h2 { font-family: 'Montserrat',Helvetica,Arial,sans-serif; font-style: normal; font-weight: 600; font-style: normal; text-transform: uppercase; }
