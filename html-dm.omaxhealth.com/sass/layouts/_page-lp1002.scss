@@ -239,9 +239,9 @@ body.page-lp1002 {
 				& {height:170px; margin-top:45px; padding-top:50px;}
 				.ln1 {@include font-size(32px);}
 				.ln2 {@include font-size(22px); margin-top:8px;}
-				&:nth-of-type(1){width:490px; padding-right:80px;}
+				&:nth-of-type(1){width:490px; padding-right:60px;}
 				&:nth-of-type(2){width:210px;}
-				&:nth-of-type(3){width:490px; padding-left:80px;}
+				&:nth-of-type(3){width:490px; padding-left:60px;}
 			}
 		}
 		@include breakpoint('bp_1024'){
@@ -250,9 +250,9 @@ body.page-lp1002 {
 				& {height:120px; margin-top:30px; padding-top:30px;}
 				.ln1 {@include font-size(28px);}
 				.ln2 {@include font-size(18px); margin-top:6px;}
-				&:nth-of-type(1){width:405px; padding-right:60px;}
+				&:nth-of-type(1){width:405px; padding-right:40px;}
 				&:nth-of-type(2){width:180px;}
-				&:nth-of-type(3){width:405px; padding-left:60px;}
+				&:nth-of-type(3){width:405px; padding-left:40px;}
 			}
 		}
 		@include breakpoint('<=bp_768'){

@@ -94,7 +94,7 @@
       <div class="container">
         <div class="vip-member">
           <img src="<?php bloginfo('template_directory'); ?>/images/lp1001/how-it-works-1.jpg" alt="Omax3 VIP Member">
-          <p>Become an Omax3 VIP member and get your first box of Omax3 for 50% off plus free shipping.</p>
+          <p>Become an Omax3 VIP member and get your first box of Omax3 for 60% off plus free shipping.</p>
         </div>
         <div class="optimal-use">
           <img src="<?php bloginfo('template_directory'); ?>/images/lp1001/how-it-works-2.jpg" alt="Optimal Usage">

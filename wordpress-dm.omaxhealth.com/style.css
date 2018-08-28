@@ -510,16 +510,16 @@ body.page-lp1002 #callouts .box .ln2 { font-family: 'Montserrat',Helvetica,Arial
   body.page-lp1002 #callouts .box { height: 170px; margin-top: 45px; padding-top: 50px; }
   body.page-lp1002 #callouts .box .ln1 { font-size: 32px; line-height: 32px; }
   body.page-lp1002 #callouts .box .ln2 { font-size: 22px; line-height: 22px; margin-top: 8px; }
-  body.page-lp1002 #callouts .box:nth-of-type(1) { width: 490px; padding-right: 80px; }
+  body.page-lp1002 #callouts .box:nth-of-type(1) { width: 490px; padding-right: 60px; }
   body.page-lp1002 #callouts .box:nth-of-type(2) { width: 210px; }
-  body.page-lp1002 #callouts .box:nth-of-type(3) { width: 490px; padding-left: 80px; } }
+  body.page-lp1002 #callouts .box:nth-of-type(3) { width: 490px; padding-left: 60px; } }
 @media screen and (min-width: 1024px) and (max-width: 1279px) { body.page-lp1002 #callouts .container { height: 180px; }
   body.page-lp1002 #callouts .box { height: 120px; margin-top: 30px; padding-top: 30px; }
   body.page-lp1002 #callouts .box .ln1 { font-size: 28px; line-height: 28px; }
   body.page-lp1002 #callouts .box .ln2 { font-size: 18px; line-height: 18px; margin-top: 6px; }
-  body.page-lp1002 #callouts .box:nth-of-type(1) { width: 405px; padding-right: 60px; }
+  body.page-lp1002 #callouts .box:nth-of-type(1) { width: 405px; padding-right: 40px; }
   body.page-lp1002 #callouts .box:nth-of-type(2) { width: 180px; }
-  body.page-lp1002 #callouts .box:nth-of-type(3) { width: 405px; padding-left: 60px; } }
+  body.page-lp1002 #callouts .box:nth-of-type(3) { width: 405px; padding-left: 40px; } }
 @media screen and (max-width: 1023px) { body.page-lp1002 #callouts { background: url("images/lp1002/callouts-bg-mobile.png") center center no-repeat; background-size: cover; }
   body.page-lp1002 #callouts .flexbox { position: relative; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); background-image: url("images/lp1002/callouts-drop.png"); background-repeat: no-repeat; background-position: center center; background-size: auto auto; }
   body.page-lp1002 #callouts .flexbox .box:last-of-type { margin-bottom: 0px !important; } }
