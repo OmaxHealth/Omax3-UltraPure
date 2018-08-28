@@ -65,6 +65,25 @@ module.exports = function(grunt) {
 		}
 	});
 
+	// Concatinate JS Files
+	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.config('concat',{
+		options: {sourceMap:false},
+		build_all: {	
+			src: [
+				html_source_folder+'/css/bridge-default.min.css',
+				html_source_folder+'/css/bridge-stylesheet.min.css',
+				html_source_folder+'/css/bridge-print.min.css',
+				html_source_folder+'/css/bridge-webkit_stylesheet.min.css',
+				html_source_folder+'/css/bridge-style_dynamic.min.css',
+				html_source_folder+'/css/bridge-responsive.min.css',
+				html_source_folder+'/css/bridge-style_dynamic_responsive.min.css',
+				html_source_folder+'/css/bridge-custom_css.min.css'
+			],
+			dest: html_source_folder+'/css/bridge.min.css'
+		}
+	});
+	
 	// Image Compression
 	grunt.loadNpmTasks('grunt-contrib-imagemin');
 	grunt.config('imagemin',{
@@ -85,5 +104,6 @@ module.exports = function(grunt) {
 
 	// Default task(s):
 	grunt.registerTask('build', ['sass:build','postcss:build','cssmin:build','uglify:build']);
-	grunt.registerTask('build_all', ['sass:build','postcss:build','cssmin:build','uglify:build','imagemin:build']);
+	grunt.registerTask('build_all', ['sass:build','postcss:build','cssmin:build_all','concat:build_all','uglify:build']);
+	grunt.registerTask('build_images', ['imagemin:build']);
 };
