@@ -39,12 +39,12 @@
         <a href="https://www.trustpilot.com/review/omaxhealth.com" target="_blank">Trustpilot</a>
         </div>
       <!-- End TrustBox widget -->						
-    <div class="overlay-content">Get Your First Box for $19.95 + Free Shipping*</div>
+    <div class="overlay-content">Get Your First Box for $19.95* + Free Shipping</div>
       </div>
 	</div>
 	<div class="nav-wrapper">
 		<div class="wrapper">
-			<div class="logo"><img src="<?php bloginfo('template_directory'); ?>/images/omax3-logo.png" alt="Omax3 Logo"></div>
+			<div class="logo"><img src="<?php bloginfo('template_directory'); ?>/images/logo-omax3.png" alt="Omax3 Logo"></div>
 			<div class="get-started">
 				<a href="<?php bloginfo('url'); ?>/select-your-plan/">Order Now</a>
 			</div>
@@ -307,7 +307,7 @@
     <section class="get-started-last">
       <div class="wrapper">
         <h3>Power Your Body with Omax-3 Ultra-Pure.</h3>
-        <p>Get Your First Box for $19.95 + Free Shipping*</p>
+        <p>Get Your First Box for $19.95* + Free Shipping</p>
         <a href="<?php bloginfo('url'); ?>/select-your-plan/" class="orange-btn" rel="nofollow">Get Started</a>
       </div>
     </section>
