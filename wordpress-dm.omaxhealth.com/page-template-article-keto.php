@@ -1,12 +1,12 @@
-<?php get_template_part('content','header-general'); ?>
+<?php get_template_part('content','header'); ?>
 <?php the_post(); ?>
 
-<main id="keto">
+<main id="article" class="keto">
 	<section id="title">
 		<div class="container">
 			<h1>How to Kick Start </br> Your Keto Diet</h1>
 			<p>By: Nick Ciavarella</p>
-			<img src="<?php bloginfo('template_directory'); ?>/images/Advertorial_KetoDiet.png"/>
+			<img src="<?php bloginfo('template_directory'); ?>/images/articles/Advertorial_KetoDiet.png"/>
 		
 		</div>
 	</section>
@@ -29,7 +29,7 @@
 
 			<div class="flexcolumn r2">
 				<div class="column">
-					<img src="<?php bloginfo('template_directory'); ?>/images/bread-food-restaurant-people.png"/>
+					<img src="<?php bloginfo('template_directory'); ?>/images/articles/bread-food-restaurant-people.png"/>
 				</div>
 				<div class="column">
 					<p>One approach that has risen to prominence is the Keto diet, and for good reason. <strong>The Keto diet approaches weight loss from a very smart, scientifically backed method.</strong></p>
@@ -59,7 +59,7 @@
 
 			<div class="flexcolumn r5">
 				<div class="column">
-					<img src="<?php bloginfo('template_directory'); ?>/images/9O2A3404.png"/>
+					<img src="<?php bloginfo('template_directory'); ?>/images/articles/9O2A3404.png"/>
 				</div>
 				<div class="column">
 					<p>These are results you can't look past. But to really take advantage of these findings, finding the right fish oils are key. <strong>We highly recommend Omax3.</strong> It's highly concentrated with omega-3 fatty acids, coming in at a <strong>whopping 93.3%</strong> pure compared to the 30% you'll find in the top selling fish oil at the local drug store.</p>

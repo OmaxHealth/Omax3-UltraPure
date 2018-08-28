@@ -1,4 +1,4 @@
-<?php get_template_part('content','header-general'); ?>
+<?php get_template_part('content','header'); ?>
 <?php the_post(); ?>
 
 <main id="select-plan">

@@ -1,4 +1,4 @@
-<?php get_template_part('content','header-general'); ?>
+<?php get_template_part('content','header'); ?>
 <?php the_post(); ?>
 
 <main id="legal">
@@ -8,12 +8,15 @@
 			<h1>Terms &amp; Conditions</h1>
 
 			<?php if (isset($_SESSION['LP_version']) && $_SESSION['LP_version'] == "lp1001"){ ?>
-			<h2>OMAX ULTRA-PURE $19.95 FIRST BOX OFFER</h2>
-			<p>Pay only $19.95 today for a 30-day Starter Kit of Omax Ultra-Pure (A $49.95 retail value) and you'll receive free shipping and our 60-day money back guarantee.* As a VIP member, in 30 days and every 60 days thereafter, you will receive a fresh 60-day supply of Omax Ultra-Pure (2, 60-count boxes) billed to your credit card at the discounted price of $79.99 ($99.90 retail value). You can call customer service at any time to cancel, skip or change your auto-shipments. *60-day money back guarantee applies to your first order of Omax Ultra-Pure, less return shipping & handling fees. To request a refund, please follow our returns & exchange policy. If you have any questions, please contact Omax Health Customer Care at 1-800-765-6691 or care@omaxhealth.com (Monday - Friday between 8am and 7pm EST.)</p>
+			<h2>OMAX3 Ultra Pure $19.95 FIRST BOX OFFER</h2>
+			<p>Pay only $19.95 today for a 30-day supply of Omax3 Ultra Pure ($47.95 retail value) plus you'll receive a free eBook, free shipping and our 60-day money back guarantee. As a VIP member, in 30 days and every 60 days thereafter, you will receive a fresh 60-day supply of Omax3 (2, 60-count boxes) billed to your credit card at the discounted price of $79.99 ($95.90 retail value). You can call customer service at any time to cancel, skip, or change your auto-shipments.</p>
+
+			<h2>OMAX3 Ultra Pure ONE-TIME $47.95</h2>
+			<p>Pay $47.95 for a 30-day supply (60 count box) of Omax3 Ultra Pure, plus you'll receive a free eBook, free shipping and our 60-day money back guarantee.</p>
 			
 			<?php } else if (isset($_SESSION['LP_version']) && $_SESSION['LP_version'] == "lp1002"){ ?>
-			<h2>BUY 1 GET 1 FREE OF OMAX3 TERMS & CONDITIONS</h2>
-			<p>Pay $47.95 today for one box of Omax3 and you'll receive a second box absolutely FREE. Plus, with this limited-time introductory offer, you'll receive 3 free gifts and free shipping. As a VIP member, in 60 days and every 60 days thereafter, you will receive a fresh 60-day supply of Omax3 (2 boxes) billed to your credit card at the discounted price of $79.99. Shipping is free. You can call customer service at anytime to cancel or customize your order. If you have any questions, please contact Omax Health Customer Care at 1-800-765-6691 (Monday &mdash; Friday between 8am and 7pm EST.)</p>
+			<h2>OMAX3 ULTRA PURE BUY ONE GET ONE FREE OFFER</h2>
+			<p>Pay $47.95 today for one box of Omax3 and you'll receive a second box absolutely FREE. Plus, with this limited-time introductory offer, you'll receive 3 free gifts, free shipping and our 60-day money back guarantee. As a VIP member, in 60 days and every 60 days thereafter, you will receive a fresh 60-day supply of Omax3 (2 boxes) billed to your credit card at the discounted price of $79.99 ($95.90 retail value). You can call customer service at any time to cancel, skip, or change your auto-shipments.</p>
 			<?php } ?>
 			
 			<p><strong>By placing your order, you agree to the following Terms and Conditions:</strong></p> 			

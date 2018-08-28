@@ -1,8 +1,36 @@
 <?php $_SESSION['LP_version'] = "lp1001" ?>
-<?php get_template_part('content','header-lp'); ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KKHWZFS');</script>
+	<!-- End Google Tag Manager -->
+	<!-- h -->
+	<title><?php wp_title(''); ?></title>
+	<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_directory'); ?>/images/favicon.ico" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" type="text/css" media="all" />
+		
+	<!--Previous Framework CSS-->
+	<link rel='stylesheet' id='bridge-theme-css' href='<?php bloginfo('template_directory'); ?>/css/bridge.min.css' type='text/css' media='all' />
+
+	<!--Main Style-->
+	<?php wp_enqueue_style('styles',get_bloginfo('template_directory').'/style.css',array(),time()); ?>
+
+	<?php wp_head(); ?>
+
+	<!-- TrustBox script -->
+	<script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+	<!-- End Trustbox script -->
+</head>
+<body id="bridge-theme" <?php body_class(); ?>>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKHWZFS" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
 <?php the_post(); ?>
-<!-- this is the new template -->
-<!-- Conditional for order button link based on page template -->
 <header>
 	<div class="overlay-banner">
       <div class="container">
@@ -10,7 +38,7 @@
         <div class="trustpilot-widget" data-locale="en-US" data-template-id="5419b637fa0340045cd0c936" data-businessunit-id="58f6c7470000ff0005a0c05a" data-style-height="20px" data-style-width="100%" data-theme="dark">
         <a href="https://www.trustpilot.com/review/omaxhealth.com" target="_blank">Trustpilot</a>
         </div>
-      <!-- End TrustBox widget -->
+      <!-- End TrustBox widget -->						
     <div class="overlay-content">Get Your First Box for $19.95 + Free Shipping*</div>
       </div>
 	</div>
@@ -65,15 +93,15 @@
       <h3>How It Works</h3>
       <div class="container">
         <div class="vip-member">
-          <img src="<?php bloginfo('template_directory'); ?>/images/how-it-works-1.jpg" alt="Omax3 VIP Member">
+          <img src="<?php bloginfo('template_directory'); ?>/images/lp1001/how-it-works-1.jpg" alt="Omax3 VIP Member">
           <p>Become an Omax3 VIP member and get your first box of Omax3 for 50% off plus free shipping.</p>
         </div>
         <div class="optimal-use">
-          <img src="<?php bloginfo('template_directory'); ?>/images/how-it-works-2.jpg" alt="Optimal Usage">
+          <img src="<?php bloginfo('template_directory'); ?>/images/lp1001/how-it-works-2.jpg" alt="Optimal Usage">
           <p>Take 2 softgels a day for optimal wellness and results you can feel.</p>
         </div>
         <div class="monthly-supplies">
-          <img src="<?php bloginfo('template_directory'); ?>/images/how-it-works3.jpg" alt="">
+          <img src="<?php bloginfo('template_directory'); ?>/images/lp1001/how-it-works3.jpg" alt="">
           <p>After the first 30 days, get a fresh 60-day supply of Omax3 at 20% off and free shipping.</p>
         </div>
       </div>
@@ -82,15 +110,15 @@
     <section class="green-info">
       <div class="wrapper">
         <div class="strength">
-          <img src="<?php bloginfo('template_directory'); ?>/images/droplet.png" alt="">
+          <img src="<?php bloginfo('template_directory'); ?>/images/lp1001/droplet.png" alt="">
           <p>Pharmaceutical Strength</p>
         </div>
         <div class="purity">
-          <img src="<?php bloginfo('template_directory'); ?>/images/dropper.png" alt="">
+          <img src="<?php bloginfo('template_directory'); ?>/images/lp1001/dropper.png" alt="">
           <p>Tested for Purity</p>
         </div>
         <div class="omega">
-          <img src="<?php bloginfo('template_directory'); ?>/images/pill.png" alt="">
+          <img src="<?php bloginfo('template_directory'); ?>/images/lp1001/pill.png" alt="">
           <p>93.9% Pure Omega-3</p>
         </div>
       </div> 
@@ -99,10 +127,10 @@
       <div class="wrapper">
         <div class="left">
           <h3>Up to 3X Stronger than the Leading Omega-3 Supplement</h3>
-          <img src="<?php bloginfo('template_directory'); ?>/images/chart-image.png" alt="Up to 3X Stronger than the Leading Omega-3 Supplement">
+          <img src="<?php bloginfo('template_directory'); ?>/images/lp1001/chart-image.png" alt="Up to 3X Stronger than the Leading Omega-3 Supplement">
         </div>
         <div class="right">
-          <img src="<?php bloginfo('template_directory'); ?>/images/salmon-bg.png" alt="Up to 3X Stronger than the Leading Omega-3 Supplement + Salmon">
+          <img src="<?php bloginfo('template_directory'); ?>/images/lp1001/salmon-bg.png" alt="Up to 3X Stronger than the Leading Omega-3 Supplement + Salmon">
         </div>
       </div>
       <div class="wrapper">
@@ -121,7 +149,7 @@
         <div class="one">
           <div class="left">
             <div class="image">
-              <img src="<?php bloginfo('template_directory'); ?>/images/Karen.png" alt="Karen G.">
+              <img src="<?php bloginfo('template_directory'); ?>/images/lp1001/Karen.png" alt="Karen G.">
             </div>
             <div class="title">
               <h6>Karen G.</h6>
@@ -131,10 +159,10 @@
           <div class="right">
             <div class="blurb">
               <div class="quote-one">
-                <img src="<?php bloginfo('template_directory'); ?>/images/quote-one.png" alt="Quote One">
+                <img src="<?php bloginfo('template_directory'); ?>/images/lp1001/quote-one.png" alt="Quote One">
               </div>
               <div class="quote-two">
-                <img src="<?php bloginfo('template_directory'); ?>/images/quote-two.png" alt="Quote Two">
+                <img src="<?php bloginfo('template_directory'); ?>/images/lp1001/quote-two.png" alt="Quote Two">
               </div>
               <p>
                 I am 52 and have found I am able to lift and exercise harder than I have in years. I owe many thanks to Omax3 and its ability to help me repair and reduce inflammation in my muscles so I feel strong enough to work out hard many days in a row!
@@ -145,7 +173,7 @@
         <div class="two">
           <div class="left">
             <div class="image">
-              <img src="<?php bloginfo('template_directory'); ?>/images/Anders.png" alt="Anders Varner">
+              <img src="<?php bloginfo('template_directory'); ?>/images/lp1001/Anders.png" alt="Anders Varner">
             </div>
             <div class="title">
               <h6>Anders Varner</h6>
@@ -155,10 +183,10 @@
           <div class="right">
             <div class="blurb">
               <div class="quote-one">
-                <img src="<?php bloginfo('template_directory'); ?>/images/quote-one.png" alt="Quote One">
+                <img src="<?php bloginfo('template_directory'); ?>/images/lp1001/quote-one.png" alt="Quote One">
               </div>
               <div class="quote-two">
-                <img src="<?php bloginfo('template_directory'); ?>/images/quote-two.png" alt="Quote Two">
+                <img src="<?php bloginfo('template_directory'); ?>/images/lp1001/quote-two.png" alt="Quote Two">
               </div>
               <p>
                 Omax3 has earned my trust and is my only resource for high quality EPA and DHA fish oils. Omax3 is my first and only choice for fish oils for healthy joints, reducing inflammation, and brain cognition. When it comes to fish oils, Omax3 is the only brand I trust.
@@ -169,7 +197,7 @@
         <div class="three">
           <div class="left">
             <div class="image">
-              <img src="<?php bloginfo('template_directory'); ?>/images/dr-maroon.png" alt="Dr. Maroon">
+              <img src="<?php bloginfo('template_directory'); ?>/images/lp1001/dr-maroon.png" alt="Dr. Maroon">
             </div>
             <div class="title">
               <h6>Dr. Joseph Maroon</h6>
@@ -179,10 +207,10 @@
           <div class="right">
             <div class="blurb">
               <div class="quote-one">
-                <img src="<?php bloginfo('template_directory'); ?>/images/quote-one.png" alt="Quote One">
+                <img src="<?php bloginfo('template_directory'); ?>/images/lp1001/quote-one.png" alt="Quote One">
               </div>
               <div class="quote-two">
-                <img src="<?php bloginfo('template_directory'); ?>/images/quote-two.png" alt="Quote Two">
+                <img src="<?php bloginfo('template_directory'); ?>/images/lp1001/quote-two.png" alt="Quote Two">
               </div>
               <p>
                 At age 74, my joints ached. I found Omax3 essential in keeping my body limber and pain free. It also supports my brain, keeping me sharp and focused. It is my secret weapon to defying my age as I just completed my 5th Iron Man in Hawaii and have never felt better!
@@ -195,16 +223,16 @@
         <div class="one">
           <div class="left">
             <div class="image">
-              <img src="<?php bloginfo('template_directory'); ?>/images/Karen.png" alt="Karen G.">
+              <img src="<?php bloginfo('template_directory'); ?>/images/lp1001/Karen.png" alt="Karen G.">
             </div>
           </div>
           <div class="right">
             <div class="blurb">
               <div class="quote-one">
-                <img src="<?php bloginfo('template_directory'); ?>/images/quote-one.png" alt="Quote One">
+                <img src="<?php bloginfo('template_directory'); ?>/images/lp1001/quote-one.png" alt="Quote One">
               </div>
               <div class="quote-two">
-                <img src="<?php bloginfo('template_directory'); ?>/images/quote-two.png" alt="Quote Two">
+                <img src="<?php bloginfo('template_directory'); ?>/images/lp1001/quote-two.png" alt="Quote Two">
               </div>
               <p>
                 I am 52 and have found I am able to lift and exercise harder than I have in years. I owe many thanks to Omax3 and its ability to help me repair and reduce inflammation in my muscles so I feel strong enough to work out hard many days in a row!
@@ -219,16 +247,16 @@
         <div class="two">
           <div class="left">
             <div class="image">
-              <img src="<?php bloginfo('template_directory'); ?>/images/Anders.png" alt="Anders Varner">
+              <img src="<?php bloginfo('template_directory'); ?>/images/lp1001/Anders.png" alt="Anders Varner">
             </div>
           </div>
           <div class="right">
             <div class="blurb">
               <div class="quote-one">
-                <img src="<?php bloginfo('template_directory'); ?>/images/quote-one.png" alt="Quote One">
+                <img src="<?php bloginfo('template_directory'); ?>/images/lp1001/quote-one.png" alt="Quote One">
               </div>
               <div class="quote-two">
-                <img src="<?php bloginfo('template_directory'); ?>/images/quote-two.png" alt="Quote Two">
+                <img src="<?php bloginfo('template_directory'); ?>/images/lp1001/quote-two.png" alt="Quote Two">
               </div>
               <p>
                 Omax3 has earned my trust and is my only resource for high quality EPA and DHA fish oils. Omax3 is my first and only choice for fish oils for healthy joints, reducing inflammation, and brain cognition. When it comes to fish oils, Omax3 is the only brand I trust.
@@ -243,16 +271,16 @@
         <div class="three">
           <div class="left">
             <div class="image">
-              <img src="<?php bloginfo('template_directory'); ?>/images/dr-maroon.png" alt="Dr. Maroon">
+              <img src="<?php bloginfo('template_directory'); ?>/images/lp1001/dr-maroon.png" alt="Dr. Maroon">
             </div>
           </div>
           <div class="right">
             <div class="blurb">
               <div class="quote-one">
-                <img src="<?php bloginfo('template_directory'); ?>/images/quote-one.png" alt="Quote One">
+                <img src="<?php bloginfo('template_directory'); ?>/images/lp1001/quote-one.png" alt="Quote One">
               </div>
               <div class="quote-two">
-                <img src="<?php bloginfo('template_directory'); ?>/images/quote-two.png" alt="Quote Two">
+                <img src="<?php bloginfo('template_directory'); ?>/images/lp1001/quote-two.png" alt="Quote Two">
               </div>
               <p>
                 At age 74, my joints ached. I found Omax3 essential in keeping my body limber and pain free. It also supports my brain, keeping me sharp and focused. It is my secret weapon to defying my age as I just completed my 5th Iron Man in Hawaii and have never felt better!
@@ -270,7 +298,7 @@
     <section class="trustpilot">
     <h3>What Our Customers Are Saying</h3>
     <!-- TrustBox widget - Carousel -->
-    <div class="trustpilot-widget" data-locale="en-US" data-template-id="53aa8912dec7e10d38f59f36" data-businessunit-id="58f6c7470000ff0005a0c05a" data-style-height="130px" data-style-width="100%" data-theme="light" data-stars="4,5" data-schema-type="Organization">
+    <div class="trustpilot-widget" data-locale="en-US" data-template-id="53aa8912dec7e10d38f59f36" data-businessunit-id="58f6c7470000ff0005a0c05a" data-style-height="130px" data-style-width="100%" data-theme="light" data-tags="SelectedReview" data-schema-type="Organization">
     <a href="https://www.trustpilot.com/review/omaxhealth.com" target="_blank">Trustpilot</a>
     </div>
     <!-- End TrustBox widget -->

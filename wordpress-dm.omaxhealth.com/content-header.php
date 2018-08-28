@@ -10,19 +10,19 @@
 	
 	<title><?php wp_title(''); ?></title>
 	<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_directory'); ?>/images/favicon.ico" />
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" type="text/css" media="all" />
 	
 	<!--Main Style-->
-	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/cssreset.min.css" type="text/css" media="all" />
-	<?php wp_enqueue_style('styles',get_bloginfo('template_directory').'/style.css',array(),time()); ?>
+	<?php wp_enqueue_style('fonts','https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i',array()); ?>	
+	<?php wp_enqueue_style('cssreset',get_bloginfo('template_directory').'/css/cssreset.min.css',array()); ?>
+	<?php wp_enqueue_style('styles',get_bloginfo('template_directory').'/style.css',array('cssreset'),time()); ?>
 	
 	<?php wp_head(); ?>
 
 	<!-- TrustBox script -->
 	<script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
-	<!-- End Trustbox script -->
+	
 </head>
-<body id="general" <?php body_class(); ?>>
+<body <?php body_class(); ?>>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKHWZFS" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
@@ -43,7 +43,7 @@
 	</div>
 	<div class="lower">
 		<div class="container">
-			<a class="logo" href="<?php echo $link; ?>"><img src="<?php bloginfo('template_directory'); ?>/images/omax_logo_trans-ret-1024x294.png" alt="Omax3 Logo"></a>
+			<a class="logo" href="<?php echo $link; ?>"><img src="<?php bloginfo('template_directory'); ?>/images/logo-omax3.png" alt="Omax3 Logo"></a>
 		</div>
 	</div>
 </header>

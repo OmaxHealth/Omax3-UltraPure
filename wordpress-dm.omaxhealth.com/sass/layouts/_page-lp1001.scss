@@ -1,5 +1,5 @@
-// Page: LP
-#landing-page {
+// Page: LP1001 (Based on original Bridge Theme)
+body#bridge-theme {
 	*{font-family: Montserrat !important;}
 	body{background-color: #fff;}
   header{
@@ -61,6 +61,18 @@
       float: right;
       top: 10px;
       right: -42px;
+      @media (max-width:1024px) {
+        display: none;
+      }
+    }
+    .phone {
+      color: white;
+      right: 0;
+      top: 5px;
+      position: absolute;
+      font-size: 15px;
+      font-style: normal;
+      text-decoration: none;
       @media (max-width:1024px) {
         display: none;
       }
@@ -137,7 +149,7 @@
   #masthead{
     position: relative;
     @media (min-width: 1024px){
-      background: url('images/masthead-opt.png');
+      background: url('images/lp1001/masthead-opt.png');
       background-size: cover;
       background-repeat: no-repeat;
       min-height: 530px;
@@ -237,7 +249,7 @@
       }
     }
     .mobile-bg{
-      background: url('images/omax-bottom-bg.png');
+      background: url('images/lp1001/omax-bottom-bg.png');
       background-size: cover;
       background-repeat: no-repeat;
       height: 39.55vh;
@@ -292,7 +304,7 @@
       }
     }
     .left-col{
-      background: url('images/clinical-strength-bg.png');
+      background: url('images/lp1001/clinical-strength-bg.png');
       background-repeat: no-repeat;
       background-size: cover;
       height: 100vh;
@@ -304,7 +316,7 @@
       }      
       @media (min-width: 1024px){
         height: 100%;
-        background: url('images/runner_deskz.jpg');
+        background: url('images/lp1001/runner_deskz.jpg');
 		background-repeat: no-repeat;
 		background-position-x: right;
 		background-size: cover;
@@ -502,7 +514,7 @@
   .starter-kit{
     background: #fff;
     @media (min-width: 1024px){
-      background: url('images/starter-kit-bg-desktop.jpg') no-repeat;
+      background: url('images/lp1001/starter-kit-bg-desktop.jpg') no-repeat;
       background-size: cover;
       height: 600px;
     }
@@ -889,7 +901,7 @@
           p{
             font-size: 1.35em;
             color: #000;
-            font-weight: 500;
+            font-weight: 500!important;
             padding: 0;
             margin: 0;
             line-height: 1em;
@@ -1324,7 +1336,7 @@
     }
   }
   .get-started-last{
-    background: url('images/get-started-bg.jpg');
+    background: url('images/lp1001/get-started-bg.jpg');
     background-size: cover;
     text-align: right;
     padding-bottom: 15px;
@@ -1332,7 +1344,7 @@
       padding-bottom: 80px;
     }
     @media (min-width: 1024px){
-      background: url('images/hpet5y-run.jpg') no-repeat top center;//
+      background: url('images/lp1001/hpet5y-run.jpg') no-repeat top center;//
       background-size: cover;
       background-position: 10% 49%;
       height: 373px;
@@ -1500,7 +1512,8 @@
   }
 }
 
-// LP1002 Styles
+// LP1002 Styles (Depreciated)
+/*
 #landing-page.page-lp1002 {
   #limited-bubble{
 	display:none;
@@ -1518,7 +1531,7 @@
   #masthead{
     position: relative;
     @media (min-width: 1024px){
-      background: url('images/bogo-masthead-bg.jpg');
+      background: url('images/lp1001/bogo-masthead-bg.jpg');
       background-size: cover;
       background-repeat: no-repeat;
       min-height: 530px;
@@ -1556,7 +1569,7 @@
       }
       br{
         @media (min-width: 1024px){
-          /*display: none;*/
+          //display: none;
         }
       }
       h3{
@@ -1614,7 +1627,7 @@
       }
     }
     .mobile-bg{
-      background: url('images/bogo-pg.jpg');
+      background: url('images/lp1001/bogo-pg.jpg');
       background-size: cover;
       background-repeat: no-repeat;
       height: 39.55vh;
@@ -1631,3 +1644,4 @@
     }
   }
 }
+*/

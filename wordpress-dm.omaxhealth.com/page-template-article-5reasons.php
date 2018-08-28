@@ -1,12 +1,12 @@
-<?php get_template_part('content','header-general'); ?>
+<?php get_template_part('content','header'); ?>
 <?php the_post(); ?>
 
-<main id="reasons">
+<main id="article" class="reasons">
 	<section id="title">
 		<div class="container">
 			<h1>5 Reasons This New<br/>Fish Oil Supplement Is a<br/>Total Game-Changer</h1>
 			<p>By: ??</p>
-			<img src="<?php bloginfo('template_directory'); ?>/images/Hand-Water.png"/>
+			<img src="<?php bloginfo('template_directory'); ?>/images/articles/Hand-Water.png"/>
 		</div>
 	</section>	
 	
@@ -35,7 +35,7 @@
 
 			<div class="flexcolumn r3 image">
 				<div class="column">
-					 <img src="<?php bloginfo('template_directory'); ?>/images/Layer-4.png"/>
+					 <img src="<?php bloginfo('template_directory'); ?>/images/articles/Layer-4.png"/>
 				</div>
 				<div class="column">
 					<h2>1) It's Pure. Really Pure.</h2>
@@ -45,7 +45,7 @@
 
 			<div class="flexcolumn r4 image">
 				<div class="column">
-					 <img src="<?php bloginfo('template_directory'); ?>/images/02-WhyOmega_Body.png"/>
+					 <img src="<?php bloginfo('template_directory'); ?>/images/articles/02-WhyOmega_Body.png"/>
 				</div>
 				<div class="column">
 					<h2>2) It's Patented with a Special Formula.</h2>
@@ -55,7 +55,7 @@
 
 			<div class="flexcolumn r5 image">
 				<div class="column">
-					 <img src="<?php bloginfo('template_directory'); ?>/images/03-Sardines-School-486819996_3888x2916.png"/>
+					 <img src="<?php bloginfo('template_directory'); ?>/images/articles/03-Sardines-School-486819996_3888x2916.png"/>
 				</div>
 				<div class="column">
 					<h2>3) It's Sourced from High-Quality</h2>
@@ -65,7 +65,7 @@
 
 			<div class="flexcolumn r6 image">
 				<div class="column">
-					 <img src="<?php bloginfo('template_directory'); ?>/images/04-Group-1.png"/>
+					 <img src="<?php bloginfo('template_directory'); ?>/images/articles/04-Group-1.png"/>
 				</div>
 				<div class="column">
 					<h2>4) It's Third-Party Tested.</h2>
@@ -75,7 +75,7 @@
 
 			<div class="flexcolumn r7 image">
 				<div class="column">
-					 <img src="<?php bloginfo('template_directory'); ?>/images/05-iStock-686947064.png"/>
+					 <img src="<?php bloginfo('template_directory'); ?>/images/articles/05-iStock-686947064.png"/>
 				</div>
 				<div class="column">
 					<h2>5) Blister Packs, People.</h2>

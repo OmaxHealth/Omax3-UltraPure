@@ -1,8 +1,6 @@
 <footer>
   <div class="container">
-    <div class="top">  
-      *These statements have not been evaluated by the Food & Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease.
-    </div>
+    <div class="top">These statements have not been evaluated by the Food & Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease.</div>
     <p>*with enrollment into VIP auto-shipment program. 60-day money back guarantee on first order only.</p>
     <p>Customer is responsible for obtaining a return authorization and paying return shipping costs.</p>
     <p>Dr. Joseph Maroon and Anders Varner are paid endorsers of Omax3&reg;</p>
@@ -16,9 +14,9 @@
       </dl>
     </div>
     <div class="connect">
-    <a href="https://www.facebook.com/omaxhealth" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/FB-f-Logo__blue_58.png" width="58" height="58" alt="fb"></a>
-    <a href="https://www.youtube.com/omaxhealth" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/youtube_social_square_red.png" width="58" height="58" alt="ig"></a>
-    <a href="https://twitter.com/omaxhealth" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/Twitter_Social_Icon_Rounded_Square_Color.png" width="58" height="58" alt="twtr"></a>
+    <a href="https://www.facebook.com/omaxhealth" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/icon-facebook.png" width="58" height="58" alt="facebook"></a>
+    <a href="https://www.youtube.com/omaxhealth" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/icon-youtube.png" width="58" height="58" alt="youtube"></a>
+    <a href="https://twitter.com/omaxhealth" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/icon-twitter.png" width="58" height="58" alt="twitter"></a>
     </div>
   </div>
 </footer>

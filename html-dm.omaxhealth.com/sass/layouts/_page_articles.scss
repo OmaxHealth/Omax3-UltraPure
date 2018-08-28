@@ -1,47 +1,92 @@
-// Page: General Template
-#general {
+main#article {
 
-	// Global: Font Styles
-	main {
-		h2 {@include font('MontserratMedium'); color:#333;}
-		p {@include font('MontserratRegular'); color:#333;
-			strong {@include font('MontserratBold');}
-			&:last-of-type {margin-bottom:0px;}
+	h2 {@include font('MontserratMedium'); color:#333;}
+	p {@include font('MontserratRegular'); color:#333;
+		strong {@include font('MontserratBold');}
+		&:last-of-type {margin-bottom:0px;}
+	}
+	.flexcolumn {
+		.column {
+			img {width:100%; height:auto;}
 		}
-		.flexcolumn {
-			.column {
-				img {width:100%; height:auto;}
+	}
+
+	@include desktop {
+		.container {width:1000px!important; margin-bottom:40px;}
+		h2 {@include font-size(30px); margin-bottom:10px;}
+		p {@include font-size(18px,24px); margin-bottom:12px;}
+		.flexcolumn {margin-bottom:40px;
+			.column {width:50%;
+				&:first-of-type {margin-right:20px;}
+				&:last-of-type {margin-left:20px;}
 			}
+			&.single .column {width:100%; margin-left:0px; margin-right:0px;}
+		}
+	}
+	@include tablet_down {
+		img {@include center-horizontal();}
+	}
+	@include tablet {
+		.container {margin-bottom:30px;}
+		h2 {@include font-size(26px); margin-bottom:8px;}
+		p {@include font-size(16px,22px); margin-bottom:10px;}
+		.flexcolumn > .column {margin-bottom:20px;}
+	}
+	@include mobile {
+		.container {margin-bottom:20px;}
+		h2 {@include font-size(22px); margin-bottom:6px;}
+		p {@include font-size(14px,20px); margin-bottom:6px;}
+		.flexcolumn > .column {margin-bottom:14px;}
+	}
+		
+	// Global: CTA Box
+	.flexcolumn.cta {
+		.column {margin-left:0px; margin-right:0px;}
+		.column:last-of-type {
+			.inner {display:block; border-top:2px solid #000; border-bottom:2px solid #000; text-align:center; text-transform:uppercase; }
+			h3 {font-weight:700; color:#333;}
+			a {font-weight:600; color:$color-orange; text-decoration:none; margin-bottom:0px;
+				&:hover {text-decoration:underline;}
+			}		
 		}
 		
 		@include desktop {
-			.container {margin-bottom:40px;}
-			h2 {@include font-size(30px); margin-bottom:10px;}
-			p {@include font-size(18px,24px); margin-bottom:12px;}
-			.flexcolumn {margin-bottom:40px;
-				.column {width:50%;
-					&:first-of-type {margin-right:20px;}
-					&:last-of-type {margin-left:20px;}
-				}
-				&.single .column {width:100%; margin-left:0px; margin-right:0px;}
-			}
+			.column:first-of-type{width:730px!important; padding-right:60px;}
+			.column:last-of-type {width:270px!important;}
+			.inner {padding:20px;}
+			h3 {@include font-size(16px); margin-bottom:20px;}
+			a {@include font-size(20px,24px);}
 		}
 		@include tablet_down {
-			img {@include center-horizontal();}
-		}
-		@include tablet {
-			.container {margin-bottom:30px;}
-			h2 {@include font-size(26px); margin-bottom:8px;}
-			p {@include font-size(16px,22px); margin-bottom:10px;}
-			.flexcolumn > .column {margin-bottom:20px;}
-		}
-		@include mobile {
-			.container {margin-bottom:20px;}
-			h2 {@include font-size(22px); margin-bottom:6px;}
-			p {@include font-size(14px,20px); margin-bottom:6px;}
-			.flexcolumn > .column {margin-bottom:14px;}
+			.inner {padding:10px;}
+			h3 {@include font-size(14px); margin-bottom:15px;}
+			a {@include font-size(18px);}
+		}	
+	}
+	
+	// Global: Image Box
+	.flexcolumn.image {
+		.column {margin-left:0px; margin-right:0px;
+			img {width:100%; height:auto;}
 		}
 		
+		@include desktop {
+			& {margin-bottom:60px;}
+			.column:first-of-type{width:360px;}
+			.column:last-of-type{width:640px; padding-left:80px;
+				h2 {@include font-size(28px);}
+			}
+		}
+		@include tablet {
+			& {flex-direction:row; flex-wrap:nowrap; justify-content:space-between; align-items:stretch; margin-bottom:30px;}
+			.column:first-of-type{width:290px;}
+			.column:last-of-type{width:460px; padding-left:40px;
+				h2 {@include font-size(24px);} 
+			}	
+		}
+		@include mobile {
+			& {margin-bottom:20px;}
+		}	
 	}
 
 	// Global: Title	
@@ -72,56 +117,8 @@
 		}		
 	}
 	
-	// Global: CTA Box
-	.flexcolumn.cta {
-		.column {margin-left:0px; margin-right:0px;}
-		.column:last-of-type {
-			.inner {display:block; border-top:2px solid #000; border-bottom:2px solid #000; text-align:center; text-transform:uppercase; }
-			h3 {font-weight:700; color:#333;}
-			a {font-weight:600; color:$color-orange; text-decoration:none; margin-bottom:0px;
-				&:hover {text-decoration:underline;}
-			}		
-		}
-		
-		@include desktop {
-			.column:first-of-type{width:730px!important; padding-right:60px;}
-			.column:last-of-type {width:270px!important;}
-			.inner {padding:20px;}
-			h3 {@include font-size(16px); margin-bottom:20px;}
-			a {@include font-size(20px,24px);}
-		}
-		@include tablet_down {
-			.inner {padding:10px;}
-			h3 {@include font-size(14px); margin-bottom:15px;}
-			a {@include font-size(18px);}
-		}	
-	}
-
-	// Global: Image Box
-	.flexcolumn.image {
-		.column {margin-left:0px; margin-right:0px;}
-		
-		@include desktop {
-			& {margin-bottom:60px;}
-			.column:first-of-type{width:360px;}
-			.column:last-of-type{width:640px; padding-left:80px;
-				h2 {@include font-size(28px);}
-			}
-		}
-		@include tablet {
-			& {flex-direction:row; flex-wrap:nowrap; justify-content:space-between; align-items:stretch; margin-bottom:30px;}
-			.column:first-of-type{width:290px;}
-			.column:last-of-type{width:460px; padding-left:40px;
-				h2 {@include font-size(24px);} 
-			}	
-		}
-		@include mobile {
-			& {margin-bottom:20px;}
-		}	
-	}
-
 	// Page: Keto Diet
-	main#keto {
+	&.keto {
 		.flexcolumn.percentage {
 			.column:last-of-type {background-color:#AAC865;
 				.inner {position:relative; text-align:center;
@@ -180,9 +177,9 @@
 		
 				
 	}
-
+	
 	// Page: How Omax3 Relieved
-	main#relieved {
+	&.relieved {
 		.flexcolumn.r6 {text-align:center;
 			a {text-transform:uppercase; color:$color-orange; font-weight:bold; font-style:italic;}
 		}
@@ -206,12 +203,12 @@
 			}
 		}		
 	}
-
+	
 	// Page: 5 Reasons
-	main#reasons {
+	&.reasons {
 		.flexcolumn.r8 {text-align:center;
 			a {color:$color-orange; font-weight:bold;} 
 		}
-	}	
+	}
 	
 }

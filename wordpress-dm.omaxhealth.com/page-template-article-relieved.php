@@ -1,12 +1,12 @@
-<?php get_template_part('content','header-general'); ?>
+<?php get_template_part('content','header'); ?>
 <?php the_post(); ?>
 
-<main id="relieved">
+<main id="article" class="relieved">
 	<section id="title">
 		<div class="container">
 			<h1>How Omax3 Relieved My <br/>Inflammation and Joint Pain</h1>
 			<p>By: Ro Sahebi</p>
-			<img src="<?php bloginfo('template_directory'); ?>/images/iStock-475865032-copy.png"/>
+			<img src="<?php bloginfo('template_directory'); ?>/images/articles/iStock-475865032-copy.png"/>
 		</div>
 	</section>	
 	
@@ -28,7 +28,7 @@
 
 			<div class="flexcolumn r2 image">
 				<div class="column">
-					 <img src="<?php bloginfo('template_directory'); ?>/images/01-iStock-174970830.png"/>
+					 <img src="<?php bloginfo('template_directory'); ?>/images/articles/01-iStock-174970830.png"/>
 				</div>
 				<div class="column">
 					<h2>1) Why I Decided to Try Omax3</h2>
@@ -38,7 +38,7 @@
 
 			<div class="flexcolumn r3 image">
 				<div class="column">
-					 <img src="<?php bloginfo('template_directory'); ?>/images/02-Rectangle-3.png"/>
+					 <img src="<?php bloginfo('template_directory'); ?>/images/articles/02-Rectangle-3.png"/>
 				</div>
 				<div class="column">
 					<h2>2) What About Other Types of Omega Products?</h2>
@@ -48,7 +48,7 @@
 
 			<div class="flexcolumn r4 image">
 				<div class="column">
-					 <img src="<?php bloginfo('template_directory'); ?>/images/03-withguitar-copy.png"/>
+					 <img src="<?php bloginfo('template_directory'); ?>/images/articles/03-withguitar-copy.png"/>
 				</div>
 				<div class="column">
 					<h2>3) How Omax3 Ultra-Pure Has Transformed Me</h2>
@@ -58,7 +58,7 @@
 
 			<div class="flexcolumn r5 image">
 				<div class="column">
-					 <img src="<?php bloginfo('template_directory'); ?>/images/04-Omax3Ultra-Pure-with-seals_v2.png"/>
+					 <img src="<?php bloginfo('template_directory'); ?>/images/articles/04-Omax3Ultra-Pure-with-seals_v2.png"/>
 				</div>
 				<div class="column">
 					<h2>4) Why I Prefer Omax3</h2>
