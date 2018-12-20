@@ -8,15 +8,21 @@ AUTHOR: OMax Health
 AUTHOR URI: http://www.omaxhealth.com
 */
 
-// SASS: Global Elements
+ // SASS: Global Elements
 @import 
+	"global/_cssreset.scss",
 	"global/_breakpoints.scss",
 	"global/_mixins.scss",
-	"global/_config.scss",
-	"global/_global.scss";
+	"global/_flex-layout.scss";
+	
+// SASS: Build Configuration
+@import
+	"config/_config.scss",
+	"config/_images.scss";
 
 // SASS: Page Layouts
 @import 
+	"layouts/_global-elements.scss",
 	"layouts/_page-lp1001.scss",
 	"layouts/_page-lp1002.scss",
 	"layouts/_page_select-your-plan.scss",

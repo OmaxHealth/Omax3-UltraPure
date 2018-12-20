@@ -8,7 +8,7 @@ module.exports = function(grunt) {
 	if (site == undefined){
 		grunt.fail.fatal("You need to pass a --site= parameter with the task.");
 	} else {
-		var html_source_folder = "../html-"+site;
+		var html_source_folder = "../build-"+site;
 		if (grunt.file.exists(html_source_folder+'/sass/main.scss')){
 			console.log("Grunt will compile the files within the site folder: /"+html_source_folder+"/");
 		} else {

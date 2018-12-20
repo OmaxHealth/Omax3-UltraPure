@@ -1,0 +1,408 @@
+    @import url("https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+    .container-fluid {
+        padding: 0px;
+    }
+    body {
+        font-family: Montserrat;
+    }
+    body p {
+        font-size: 18px;
+        font-family: Montserrat;
+    }
+    .study {
+        color: black;
+    }
+    footer {
+        text-align:center;
+        background-color:white;
+        color: black;
+        font-size: 12px;
+        padding-top: 30px;
+        font-weight:500;
+    }
+    .content p {
+        padding: 0 0 5px 0;
+    }
+    .copy{
+        padding: 5px;
+        max-width: 630px;
+        margin: auto;
+    }
+    .cta a {
+        color: #f99800;
+    }    
+    .bottom-cta a {
+        color: #f99800;
+        font-weight: bold;
+    }
+    footer .content {
+        background-color:white;
+        padding:0 16px;
+    }
+    footer p{
+        font-family: Montserrat;
+        font-size: 11px;
+        text-align:center;
+        color: black;
+    }
+    footer dl {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    footer .links dl dd:after {
+        content: "|";
+        margin: 0 5px;
+        font-weight: 500;
+        color: #000;
+    }
+    footer a {
+        color: black;
+        font-weight:bold;
+        font-family: Montserrat;
+        text-decoration:none;
+        font-size:14px;
+        font-style:normal;
+    }
+    footer .links{
+        padding-top: 8px;
+    }
+    footer .connect{
+        padding: 20px 0;
+    }
+    .header {
+        background-color: #ebebeb;
+        text-align:center;
+    }
+    .title {
+        font-family: Montserrat;
+        text-align:center;
+        padding-bottom:60px;
+    }
+    .title p {  
+        padding-bottom:50px;
+        font-size:18px;
+    }
+    .title h1{
+        font-size: 59px;
+        padding: 50px 0 25px 0;
+        font-weight:600;
+    }
+    .green-cta {
+        background-color:#aac865; 
+        font-size:20px;
+        margin: 32px 0px;
+    }
+    .green-section {
+        padding-top:16px;
+    }
+    .green-section p {
+        padding-top:16px;
+    }
+    .green-content{
+        color:white;
+        display:inline-block;
+        padding:16px;
+    }
+    .bottom-buffer{
+        background-color: #ebebeb;
+        height: 60px;
+    }
+    .header-title {
+        width: 250px;
+        padding: 14px 0;
+    }
+    .top-cta{
+        text-align:center;
+        border-top:2px solid black;
+        border-bottom:2px solid black;
+        padding: 16px 0 !important;
+        float: right;
+        margin: 32px 0;
+        text-transform: uppercase;
+    }
+    .top-cta p {
+        font-size: 15px;
+    }
+    .cta {
+        color: #f99800;
+        font-size: 22px;
+        font-weight: 600;
+    }
+    .footer-wrapper {
+        width:800px;
+        text-align:center;
+    }
+    .sample-section{
+        padding: 16px;
+    }
+    .sample-section p {
+        padding: 16px 0;
+    }
+    .wrapper {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    .bottom-info {
+        text-align:center;
+    }
+    .bottom-info p {
+        padding-top: 16px;
+    }
+    .connect {
+        padding-bottom:40px;
+    }
+    .connect a {
+        padding: 0 8px;
+    }
+    .bottom-info {
+        text-align: center;
+    }
+    .bottom-info p {
+        font-size: 21px;
+    }
+    .bottom-cta {
+        color: #f99800;
+        text-transform: uppercase;
+        font-size: 24px;
+        font-weight:bold;
+    }
+    .content {
+        max-width: 800px;
+        margin: 0 auto;
+        border-bottom: 1px solid #cccccc;
+        padding: 5px;
+    }
+    .omega-3 {
+        display:inline-block;
+        font-size:32px;
+        line-height:32px;
+        padding-left:24px;
+        text-align:left; 
+    }
+    .percentage {
+        font-size: 72px;
+        font-weight: 500;
+        display:inline-block;
+    }
+    .sample-section {
+        padding:0;
+    }
+    .ruledme {
+        font-size: 1.0em;
+        font-weight: 500;
+        text-decoration: underline !important;
+    }
+    .green-cta {
+        text-align: center;
+        margin: 16px 0px;
+    }
+
+    @media only screen and (min-width:0px) and (max-width:480px) {
+        .title h1{
+        font-size:32px;
+        padding:0px;
+        }
+        .title{
+        padding-bottom:30px;
+        }
+        .title p {
+        font-size:18px;
+        padding-bottom:25px;
+        }
+        .header-title {
+        width: 150px;
+        }
+        h2 {
+        font-size:21px;
+        font-weight:bold;
+        }
+        .green-content div {
+        padding: 0px;
+        }
+        footer .content {
+            background-color:white;
+            padding:0 15px;
+        }
+        .green-cta {
+        text-align:center;
+        }
+        .omega-3 {
+        text-align:left;
+        }
+        .row .info {
+        padding: 0;
+        }
+        .row .sample-section {
+        padding: 8px 0;
+        }
+        .cta-wrapper{
+        padding: 0 32px;
+        }
+        .bottom-cta {
+        font-size: 20px;
+        }
+        .bottom-info{
+        border-top: 2px solid black;
+        }
+        .wrapper {
+        padding: 16px !important;
+        }
+        .content {
+        border: none;
+        font-weight:400;
+        font-size:.9em;
+        }
+        .copy{
+            padding: 8px;
+        }
+
+        .row .info:first-of-type {
+            padding: 16px 0;
+        }
+        .content p {
+            font-weight:500;
+            font-size:1.1em;
+            line-height:1.1em;
+        }
+        .ruledme {
+            font-weight: 500;
+            font-size: 1.0em;
+        
+        }
+        .percentage {
+        font-size:58px;
+        padding:24px;
+        display:inline-block;
+        }
+        .green-cta {
+        text-align: center;
+        margin: 8px 0px;
+        }
+        .sample-section {
+        padding:0;
+        }
+        .omega-3 {
+        font-size:24px;
+        line-height:24px;
+        padding:24px;
+        }
+        footer dl {
+        display: inline;
+        justify-content: center;
+        align-items: center;
+        }
+        footer .links dl dd:after {
+        content: "";
+        margin: 0 5px;
+        font-weight: 500;
+        color: #000;
+        }
+        .bottom-cta {
+        font-size: 18px;
+        }
+        }
+        
+        @media only screen and (min-width:481px) and (max-width:900px) {
+        .title {
+        padding-bottom: 0px;
+        }
+        .title h1{
+        font-size:56px;
+        padding: 25px 0 0 0;
+        }
+        .title p {
+        font-size:20px;
+        padding-bottom:25px;
+        }
+        h2 {
+        font-size:26px;
+        }
+        .header-title {
+        width: 180px;
+        }
+        .green-content div {
+        padding: 0px;
+        }
+        .bottom-info {
+        font-size: 14px;
+        }
+        .cta-wrapper{
+        padding: 0 16px;
+        }
+        body p {
+        font-size:12px;
+        }
+        .top-cta p {
+        font-size:11px;
+        }
+        .title{
+        padding-bottom:30px;
+        }
+        .bottom-cta {
+        font-size: 24px;
+        }
+        .row .sample-section {
+        padding: 8px 0;
+        }
+        .content {
+        border: none;
+        }
+            
+        .top-cta p {
+        font-size:11px;
+        }
+        .percentage {
+        font-size:58px;
+        display:inline-block;
+        }
+        .cta {
+        font-size:18px;
+        }
+        .omega-3 {
+        font-size:24px;
+        line-height:24px;
+        padding:24px;
+        }
+        .sample-section p {
+        padding: 8px;
+        }
+        .green-content {
+        padding: 0px;
+        }
+        .content {
+            border: none;
+
+            }
+        .content p {
+            font-weight:500;
+            font-size:10px;
+            line-height:10px;
+        }
+        .top-cta{
+        margin: 16px;
+        }
+        .bottom-info p {
+        font-size: 16px;
+        }
+        .row .info {
+        padding: 0;
+        }
+        .row .info:first-of-type {
+            padding: 16px 0;
+        }
+        footer dl {
+        display: inline;
+        justify-content: center;
+        align-items: center;
+        }
+        footer .links dl dd:after {
+        content: "";
+        margin: 0 5px;
+        font-weight: 500;
+        color: #000;
+        }
+        .bottom-cta {
+        font-size: 24px;
+        }
+}

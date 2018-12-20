@@ -1,0 +1,29 @@
+@charset "UTF-8";
+/*!
+THEME NAME: Omax3 UltraPure
+THEME URI: https://omax3.com
+DESCRIPTION: A Responsive Template
+VERSION: 2.0
+AUTHOR: OMax Health
+AUTHOR URI: http://www.omaxhealth.com
+*/
+
+ // SASS: Global Elements
+@import 
+	"global/_mixins.scss",
+	"global/_cssreset.scss",
+	"global/_breakpoints.scss",
+	"global/_flex-layout.scss";
+	
+// SASS: Build Configuration
+@import
+	"config/_config.scss",
+	"config/_images.scss";
+	
+// SASS: Page Layouts
+@import 
+	"layouts/_global-elements.scss",
+	"layouts/_page-home.scss",
+	"layouts/_page-select-your-plan.scss",
+	"layouts/_page-contact-us.scss",
+	"layouts/_page-legal.scss";

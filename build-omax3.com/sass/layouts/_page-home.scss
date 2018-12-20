@@ -1,0 +1,530 @@
+// Page: Home
+body.page-home {
+	main {
+		
+		// Section: Hero	
+		#hero {
+			& {@include image-background($image-hero-bg,'bottom center','cover');}
+			h1 {@include font('Montserrat','SemiBold'); text-transform:uppercase;}
+			h3 {@include font('Montserrat','Regular');}
+			ul {
+				li {@include font('Montserrat','Regular'); position:relative;
+					&:before {content:""; position:absolute; left:0px; display:inline-block; @include image-background($image-icon-checkmark,'top center','100% 100%');}
+					strong {@include font('Montserrat','Bold'); font-size:inherit; line-height:inherit; color:inherit;}
+					&:last-of-type {margin-bottom:0px!important;}
+				}
+			}
+			 
+			@include breakpoint('bp_1280'){
+				.container {height:700px;}
+				.left {width:500px; padding-top:120px; padding-right:20px;
+					h1 {@include font-size(42px,44px); margin-bottom:20px;}
+					h3 {@include font-size(30px); margin-bottom:30px;}
+					ul {margin-bottom:50px;
+						li {@include font-size(24px,28px); padding-left:45px; margin-bottom:20px;
+							&:before {top:-2px; width:30px; height:30px;}
+						}
+					}
+					a.button {@include button(180px,55px,20px);}
+				}
+				.right {width:700px; padding-top:150px;}
+			}
+			@include breakpoint('bp_1024'){
+				.container {height:560px;}
+				.left {width:420px; padding-top:100px; padding-right:15px;
+					h1 {@include font-size(34px,38px); margin-bottom:15px;}
+					h3 {@include font-size(26px); margin-bottom:25px;}
+					ul {margin-bottom:30px;
+						li {@include font-size(20px,24px); letter-spacing:-0.02em; padding-left:35px; margin-bottom:18px;
+							&:before {top:-1px; width:25px; height:25px;}
+						}
+					}
+					a.button {@include button(180px,55px,20px);}
+				}
+				.right {width:580px; padding-top:130px;}
+			}
+			@include breakpoint('<=bp_768'){
+				h1 {@include center-horizontal(); text-align:center;}
+				h3 {display:none;}
+				a.button,
+				img {@include center-horizontal();}
+			}
+			@include breakpoint('bp_768'){
+				.left {padding-top:40px;
+					h1 {@include font-size(72px,76px); margin-bottom:40px;}
+					h3 {@include font-size(46px); margin-bottom:30px;}
+					ul {margin-bottom:60px;
+						li {@include font-size(32px,32px); letter-spacing:-0.02em; padding-left:60px; margin-bottom:40px;
+							&:before {width:45px; height:45px; top:-7px;}
+						}
+					}
+					a.button {@include button(460px,100px,38px);}
+				}
+				.right {padding:60px 0;}
+			}
+			@include breakpoint('bp_540'){
+				.left {padding-top:30px;
+					h1 {@include font-size(50px,54px); margin-bottom:30px;}
+					h3 {@include font-size(32px); margin-bottom:15px;}
+					ul {margin-bottom:40px;
+						li {@include font-size(24px,28px); padding-left:35px; margin-bottom:20px;
+							&:before {width:30px; height:30px; top:-2px;}
+						}
+					}
+					a.button {@include button(320px,66px,26px);}
+				}
+				.right {padding:40px 0;}
+			}
+			@include breakpoint('bp_360'){
+				.left {padding-top:20px;
+					h1 {@include font-size(34px,36px); margin-bottom:15px;}
+					h3 {@include font-size(22px); margin-bottom:10px;}
+					ul {margin-bottom:20px;
+						li {@include font-size(16px,20px); letter-spacing:-0.04em; padding-left:25px; margin-bottom:15px;
+							&:before {width:20px; height:20px; top:-1px;}
+						}
+					}
+					a.button {@include button(215px,44px,18px);}
+				}
+				.right {padding:30px 0;}
+			}
+		}
+
+		// Section: Free Shipping	
+		#free-shipping {
+			& {background-color:$color-green;}
+			.container {
+				h3 {@include font('Montserrat','Medium'); color:#fff; text-transform:uppercase; text-align:center; @include center-horizontal(); @include center-vertical();}
+			}
+			
+			@include breakpoint('>=bp_1024'){
+				.container {height:80px;}
+				h3 {@include font-size(22px);}
+			}
+			@include breakpoint('bp_768'){
+				.container {height:100px;}
+				h3 {@include font-size(32px,36x); max-width:700px;}
+			}
+			@include breakpoint('<=bp_540'){
+				.container {height:90px;}
+				h3 {@include font-size(22px,30px); max-width:500px;}
+			}
+		}
+		
+		// Section: Clinical Strength
+		#clinical {
+			h2 {@include font('Montserrat','Medium'); color:#000;}
+			li:last-of-type {margin-bottom:0px!important;}
+			h3 {position:relative; @include font('Montserrat','Medium'); color:$color-green; text-transform:uppercase;
+				span {position:absolute; top:0px; left:0px; display:block; border-radius:50%; background-color:$color-green; color:#fff; text-align:center; font-size:80%;}
+			}
+			p {@include font('Montserrat','Medium');}
+
+			@include breakpoint('>=bp_1024'){
+				.flexcolumn {max-width:1450px; margin-left:auto; margin-right:auto;
+					.column {width:50%; min-height:760px;
+						&.left {@include image-background($image-clinical-bg-desktop,'top right','cover');}
+						&.right {
+							.inner {margin:40px 20px 20px 100px; max-width:400px;}
+							h2 {@include font-size(44px); margin-bottom:40px;}
+							li {margin-bottom:40px;
+								h3 {padding-left:40px; @include font-size(18px,25px); margin-bottom:10px;
+									span {width:25px; height:25px; line-height:25px;}
+								}
+								p {@include font-size(16px,24px);}
+							}
+						}
+					}
+				}
+			}
+			@include breakpoint('<=bp_768'){
+				.column {
+					&.left {display:none;}
+					&.right {
+						h2 {@include center-horizontal(); text-align:center;}
+						ul {@include center-horizontal();
+							li {
+								h3 {padding-left:0px!important;
+									span {display:none;}
+								}
+								p {padding-left:0px;}
+							}
+						}
+					}
+				}
+			}
+			@include breakpoint('bp_768'){
+				.right {
+					.inner {padding:60px 20px;}
+					h2 {@include font-size(62px); margin-bottom:40px;}
+					ul {max-width:880px;
+						li {margin-bottom:40px;
+							h3 {padding-left:60px; @include font-size(36px,50px); margin-bottom:10px;
+								span {width:50px; height:50px; line-height:50px;}
+							}
+							p {@include font-size(26px,34px); padding-left:60px;}
+						}
+					}	
+				}
+			}
+			@include breakpoint('<=bp_540'){
+				.right {
+					.inner {padding:30px 15px;}
+					h2 {@include font-size(30px,34px); margin-bottom:30px; max-width:420px;}
+					ul {
+						li {margin-bottom:20px;
+							h3 {padding-left:40px; @include font-size(22px,30px); margin-bottom:10px;
+								span {width:30px; height:30px; line-height:30px;}
+							}
+							p {@include font-size(16px,22px); padding-left:40px;}
+						}
+					}	
+				}
+			}			
+					
+		}	
+		
+		// Section: How it Works
+		#how-it-works {
+			& {background-color:#F5F5F5;}
+			h2 {@include font('Montserrat','Medium'); color:#000; text-align:center;}
+			.column {
+				& > * {@include center-horizontal();}
+				p {@include font('Montserrat','Medium'); text-align:center;}
+			}
+
+			@include breakpoint('>=bp_1024'){
+				h2 {@include font-size(44px); margin:40px 0;}
+				.column {width:33.3%;
+					img {height:160px; margin-bottom:20px;}
+					p {@include font-size(14px,20px); max-width:260px;}
+				}
+				a.button {@include button(160px,46px,18px); margin:40px auto;}
+			}
+			@include breakpoint('<=bp_768'){
+				.column {margin-left:auto; margin-right:auto;
+					img {max-width:80%;}
+				}
+				a.button {@include center-horizontal();}
+			}
+			@include breakpoint('bp_768'){
+				h2 {@include font-size(62px); margin:40px 0;}
+				.column {max-width:640px; margin-bottom:40px;
+					img {margin-bottom:10px;}
+					p {@include font-size(26px,36px);}
+				}
+				a.button {@include button(220px,60px,20px); margin-bottom:60px;}
+			}
+			@include breakpoint('<=bp_540'){
+				h2 {@include font-size(30px); margin:30px 0;}
+				.column {max-width:540px; margin-bottom:30px;
+					img {margin-bottom:10px;}
+					p {@include font-size(16px,20px);}
+				}
+				a.button {@include button(180px,50px,18px); margin-bottom:40px;}
+			}			
+			
+		}
+			
+		// Section: Starter Kit
+		#starter-kit {
+			& {background-color:#DEE2EB;}
+			h2,
+			p {@include font('Montserrat','Medium'); color:#000;}
+			
+			@include breakpoint('>=bp_1024'){
+				& {@include image-background($image-starter-kit-bg-desktop,'top right','cover');}
+				.container {height:600px;}
+				.flexcolumn {@include center-vertical();
+					.left {width:360px; 
+						h2 {@include font-size(44px); margin-bottom:30px;}
+						p {@include font-size(16px,24px); margin-bottom:20px;}
+						a.button {@include button(160px,46px,18px);}
+					}
+				}
+			}
+			@include breakpoint('<=bp_768'){
+				.container {width:100%!important; padding-left:0px; padding-right:0px;}
+				.flexcolumn {
+					.left {background-color:#fff;
+						h2, p {text-align:center; @include center-horizontal();}
+						a.button {@include center-horizontal();}
+					}
+					.right {@include image-background($image-starter-kit-bg-mobile,'bottom right','100% auto'); height:calc(100vw * .8);}
+				}
+			}
+			@include breakpoint('bp_768'){
+				.flexcolumn {
+					.left {padding:60px 20px;
+						h2 {@include font-size(62px); margin-bottom:20px;}
+						p {@include font-size(28px,38px); max-width:800px; margin-bottom:40px;}
+						a.button {@include button(220px,60px,20px);}
+					}
+				}
+			}
+			@include breakpoint('<=bp_540'){
+				.flexcolumn {
+					.left {padding:30px 15px;
+						h2 {@include font-size(30px,34px); margin-bottom:20px;}
+						p {@include font-size(16px,20px); max-width:600px; margin-bottom:20px;}
+						a.button {@include button(180px,50px,18px);}
+					}
+				}
+			}			
+		}
+		
+		// Section: Green Info
+		#icons {
+			& {background-color:$color-green;}
+			.box {@include image-background-style('top left','auto 100%');
+				&:nth-of-type(1){@include image-background-file($image-icon-pill);}
+				&:nth-of-type(2){@include image-background-file($image-icon-dropper);}
+				&:nth-of-type(3){@include image-background-file($image-icon-droplet);}
+				span {display:block; @include font('Montserrat','Medium'); color:#fff; text-transform:uppercase; @include center-vertical();}
+			}
+			
+			@include breakpoint('>=bp_1024'){
+				.flexbox {max-width:1000px; margin:40px auto;
+					.box {height:30px; padding-left:40px;
+						span {@include font-size(16px); letter-spacing:1px;}
+					}
+				}				
+			}
+			@include breakpoint('<=bp_768'){
+				.container {width:100%!important; padding-left:0px; padding-right:0px;}
+				.flexbox {
+					.box {border-bottom:2px solid #fff;}
+				}
+			}
+			@include breakpoint('bp_768'){
+				.box {height:120px; padding-left:140px; @include image-background-style('center left 40px','auto 80px');
+					span {@include font-size(28px,80px);}
+				}
+			}
+			@include breakpoint('<=bp_540'){
+				.box {height:80px; padding-left:80px; @include image-background-style('center left 20px','auto 40px');
+					span {@include font-size(18px,22px);}
+				}
+			}			
+		}
+
+		// Section: Stronger
+		#stronger {
+			& {max-width:1400px; min-width:auto; margin-left:auto; margin-right:auto;}
+			.inner {display:block;}
+			h2 {@include font('Montserrat','Medium'); color:#000;}
+			
+			@include breakpoint('>=bp_1024'){
+				& {@include image-background($image-stronger-salmon-bg,'top right','auto 100%');}
+				.container {min-height:600px;}
+				.inner {width:500px; margin-top:40px;
+					h2 {@include font-size(44px,48px); margin-bottom:40px;}
+					img {width:400px;}
+					a.button {@include button(160px,46px,18px); margin:40px 0;}
+				}	
+			}
+			@include breakpoint('bp_1024'){
+				& {@include image-background-style('top right -100px;','auto 100%');}
+			}
+			@include breakpoint('<=bp_768'){
+				.inner {
+					h2 {@include center-horizontal(); text-align:center;}
+					img,
+					a.button {@include center-horizontal();}	
+				}
+			}
+			@include breakpoint('bp_768'){
+				.inner {padding:60px 0;
+					h2 {@include font-size(62px); margin-bottom:40px;}
+					img {max-width:600px; margin-bottom:40px;}
+					a.button {@include button(220px,60px,20px);}
+				}
+			}
+			@include breakpoint('<=bp_540'){
+				.inner {padding:30px 0;
+					h2 {@include font-size(30px,34px); margin-bottom:30px;}
+					img {max-width:80%; margin-bottom:40px;}
+					a.button {@include button(180px,50px,18px);}
+				}
+			}
+		}
+
+		// Section: Safe + Tested
+		#safe {
+			& {background-color:$color-green;}
+			h2 {@include font('Montserrat','Medium'); color:#fff; text-transform:uppercase;}
+			p {@include font('Montserrat','Medium'); color:#fff;}
+			
+			@include breakpoint('>=bp_1024'){
+				.flexcolumn {width:1000px; margin:40px auto;
+					.left {width:360px;
+						h2 {@include font-size(40px); @include center-vertical();}
+					}
+					.right {width:640px;
+						p {@include font-size(16px,24px);}
+					}
+				} 
+			}
+			@include breakpoint('<=bp_768'){
+				h2, p {@include center-horizontal(); text-align:center;}
+			}
+			@include breakpoint('bp_768'){
+				.container {padding:40px 20px;}
+				h2 {@include font-size(36px); margin-bottom:20px;}
+				p {@include font-size(20px,28px);}
+			}
+			@include breakpoint('<=bp_540'){
+				.container {padding:30px 15px;}
+				h2 {@include font-size(30px); margin-bottom:10px;}
+				p {@include font-size(16px,22px);}
+			}
+		}
+		
+		// Section: User Quotes
+		#quotes {	
+			h2 {@include font('Montserrat','Medium'); color:#000; text-align:center;}
+			.user {display:flex; flex-direction:column; position:relative; margin-left:auto; margin-right:auto;
+				img {position:absolute; top:0px; left:0px;}
+				.title {
+					h3 {@include font('Montserrat','SemiBold');}
+					p {@include font('Montserrat','Medium');}
+				}
+				.quote {
+					p {display:block; position:relative; @include font('Montserrat','Medium');
+						&:before, &:after {content:""; position:absolute; top:0px; @include image-background-style('top center','100% auto'); z-index:10;}
+						&:before {left:0px; @include image-background-file($image-icon-quote-left);}
+						&:after {right:0px; @include image-background-file($image-icon-quote-right);}
+					}
+				}				
+			}
+			
+			@include breakpoint('>=bp_1024'){
+				h2 {@include font-size(50px); margin:40px auto;}
+				.user {min-height:180px; width:780px; padding-left:230px; padding-top:20px; margin-bottom:60px;
+					img {width:180px; height:180px;}
+					.title {order:2; padding:0 40px;
+						h3 {@include font-size(30px); margin-bottom:4px;}
+						p {@include font-size(18px);}
+					}
+					.quote {order:1; margin-bottom:20px;
+						p {padding:0 40px; @include font-size(16px,24px);
+							&:before,
+							&:after {width:30px; height:30px;}
+						}
+					}
+				}
+			}
+			@include breakpoint('<=bp_768'){
+				h2 {@include center-horizontal();}
+				.user {
+					.title {position:absolute;}
+				}
+			}
+			@include breakpoint('bp_768'){
+				.container {padding:60px 20px 0;}
+				h2 {@include font-size(62px); margin-bottom:40px;}
+				.user {padding-top:250px; margin-bottom:60px;
+					img {width:220px; height:220px;}
+					.title {top:80px; left:250px;
+						h3 {@include font-size(36px); margin-bottom:4px;}
+						p {@include font-size(22px);}
+					}
+					.quote {
+						p {padding:0 40px; @include font-size(22px,28px);
+							&:before,
+							&:after {width:30px; height:30px;}
+						}
+					}
+				}				
+			}
+			@include breakpoint('<=bp_540'){
+				.container {padding:30px 15px 0;}
+				h2 {@include font-size(30px,34px); margin-bottom:20px;}
+				.user {padding-top:140px; margin-bottom:30px;
+					img {width:120px; height:120px;}
+					.title {top:30px; left:140px;
+						h3 {@include font-size(26px); margin-bottom:4px;}
+						p {@include font-size(16px);}
+					}
+					.quote {
+						p {padding:0 30px; @include font-size(16px,20px);
+							&:before,
+							&:after {width:20px; height:20px;}
+						}
+					}
+				}				
+			}			
+		}			
+		
+		// Section: User Quotes
+		#trustpilot {
+			& {background-color:#f9f9f9;}
+			h2 {@include font('Montserrat','Medium'); @include center-horizontal(); text-align:center;}
+			
+			@include breakpoint('>=bp_1024'){
+				& {padding:40px 0;}
+				h2 {@include font-size(36px); margin-bottom:40px;}	
+			}
+			@include breakpoint('bp_768'){
+				& {padding:40px 0;}
+				h2 {@include font-size(42px); margin-bottom:40px;}	
+			}
+			@include breakpoint('<=bp_540'){
+				& {padding:30px 0;}
+				h2 {@include font-size(26px); max-width:320px; margin-bottom:20px;}	
+			}			
+		}
+		
+		// Section: Lower CTA
+		#lowerCTA {
+			& {@include image-background($image-lowerCTA-bg,'center center','cover');}
+			h2 {@include font('Montserrat','Medium');}
+			p {@include font('Montserrat','Medium');
+				br {display:none;}
+			}
+			
+			@include breakpoint('>=bp_1024'){
+				.container {height:380px;}
+				.inner {float:right; width:520px; @include center-vertical(); margin-right:100px;
+					h2 {@include font-size(44px); margin-bottom:30px;}
+					p {@include font-size(20px); margin-bottom:15px;}
+					a.button {@include button(160px,46px,18px);}
+				}
+			}
+			@include breakpoint('bp_1024'){
+				& {background-position:top left -100px;}
+				.inner {margin-right:0px;}
+			}
+			@include breakpoint('<=bp_768'){
+				.container {width:100%!important; padding-left:0px; padding-right:0px;}
+				.inner {float:right; width:80%;
+					h2,p {text-align:right;}
+					a.button {@include center-horizontal();}
+				}	
+			}
+			@include breakpoint('bp_768'){
+				& {background-position:center left -400px;}
+				.container {min-height:420px;}
+				.inner {margin-top:100px; padding-right:20px; max-width:640px;
+					h2 {@include font-size(50px); margin-bottom:30px;}
+					p {@include font-size(26px); margin-bottom:20px;}
+					a.button {@include button(220px,60px,20px);}
+				}
+			}
+			@include breakpoint('<=bp_540'){
+				& {background-position:center left -320px;}
+				.container {min-height:300px;}
+				.inner {margin-top:40px; padding-right:15px; max-width:420px;
+					h2 {@include font-size(30px); margin-bottom:20px;}
+					p {@include font-size(18px); margin-bottom:20px;}
+					a.button {@include button(180px,50px,18px);}
+				}
+			}
+			@include breakpoint('bp_360'){
+				& {background-position:center left -320px;}
+				p br {display:block;}
+			}		
+		}
+		
+	}
+}

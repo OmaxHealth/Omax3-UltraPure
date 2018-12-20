@@ -1,0 +1,172 @@
+// Global: Button
+a.button {
+	& {display:block; position:relative; background-color:$color-orange;
+		span {display:block; position:relative; width:100%; @include font('Montserrat','Medium'); color:#fff; text-align:center;}
+	}
+	&:hover {text-decoration:none; background-color:#f08400;}
+}
+
+// Global: Top Header
+header {
+	& {background-color:#fff; position:fixed; top:0px; left:0px; right:0px; z-index:100;}
+	.upper {
+		a.logo {position:absolute; display:block; @include image-background($image-logo-omax3,'center center','100% 100%'); overflow:hidden; text-indent:-1000px;}
+		nav.global {position:absolute; right:0px;
+			& > * {position:absolute; display:block;}
+			a.phone {left:0px; @include image-background($image-icon-phone,'center center','100% 100%'); text-indent:-1000px; cursor:pointer;}
+			a.button {right:0px;}
+		}
+	}
+	.lower {background-color:$color-green;
+		.offer {position:absolute; @include font('Montserrat','Medium'); color:#fff;
+			span {font-family:inherit; font-weight:inherit; font-size:inherit; line-height:inherit; color:inherit;}
+		}
+		.trustpilot {position:absolute; display:none;}
+	}
+	
+	@include breakpoint('>=bp_1024'){
+		a.logo {left:0px;}
+		nav.global a.phone {display:none;}
+		.lower .offer {left:0px; right:0px; text-align:center;}
+	}
+	@include breakpoint('<=bp_768'){
+		.container {width:100%!important; padding:0px!important;}
+		nav.global .phone {display:none;}
+		.lower .offer {left:0px; right:0px; text-align:center;
+			span {display:none;}
+		}
+	}
+	@include breakpoint('bp_1280'){
+		.upper {
+			&, .container {height:75px;}
+			a.logo {top:10px; @include image-size($image-logo-omax3,null,55px);}
+			nav.global {width:140px; height:75px;
+				a.button {top:10px; @include button(180px,55px,20px);}
+			}		
+		}
+		.lower {
+			&, .container {height:35px;}
+			.offer {@include font-size(16px,35px);}
+		}		
+	}
+	@include breakpoint('bp_1024'){
+		.upper {
+			&, .container {height:60px;}
+			a.logo {top:10px; @include image-size($image-logo-omax3,null,40px);}
+			nav.global {width:120px; height:60px;
+				a.button {top:10px; @include button(160px,40px,18px);}
+			}		
+		}
+		.lower {
+			&, .container {height:30px;}
+			.offer {@include font-size(16px,30px);}
+			.trustpilot {top:7px; right:-45px;}
+		}		
+	}
+	@include breakpoint('bp_768'){
+		.upper {
+			&, .container {height:95px;}
+			a.logo {left:20px; top:15px; @include image-size($image-logo-omax3,null,65px);}
+			nav.global {width:300px; height:95px;
+				a.button {right:20px; top:15px; @include button(220px,65px,24px);}
+				a.phone {top:15px; @include image-size($image-icon-phone,null,65px);}
+			}		
+		}
+		.lower {
+			&, .container {height:45px;}
+			.offer {@include font-size(22px,45px);}
+			.trustpilot {top:7px; right:-45px;}
+		}		
+	}
+	@include breakpoint('bp_540'){
+		.upper {
+			&, .container {height:70px;}
+			a.logo {left:15px; top:10px; @include image-size($image-logo-omax3,null,50px);}
+			nav.global {width:240px; height:70px;
+				a.button {right:15px; top:10px; @include button(180px,50px,20px);}
+				a.phone {top:10px; @include image-size($image-icon-phone,null,50px);}
+			}		
+		}
+		.lower {
+			&, .container {height:30px;}
+			.offer {@include font-size(16px,30px);}
+			.trustpilot {top:7px; right:-45px;}
+		}		
+	}
+	@include breakpoint('bp_360'){
+		.upper {
+			&, .container {height:45px;}
+			a.logo {left:15px; top:5px; @include image-size($image-logo-omax3,null,35px);}
+			nav.global {width:180px; height:45px;
+				a.button {right:15px; top:5px; @include button(140px,35px,16px);}
+				a.phone {top:5px; @include image-size($image-icon-phone,null,35px);}
+			}		
+		}
+		.lower {
+			&, .container {height:25px;}
+			.offer {@include font-size(12px,25px);}
+			.trustpilot {top:7px; right:-45px;}
+		}		
+	}
+}
+
+// Global: Main Spacing for Fixed Header
+main {
+	@include breakpoint('bp_1280'){
+		margin-top:110px;
+	}
+	@include breakpoint('bp_1024'){
+		margin-top:90px;
+	}
+	@include breakpoint('bp_768'){
+		margin-top:140px;
+	}
+	@include breakpoint('bp_540'){
+		margin-top:100px;
+	}
+	@include breakpoint('bp_360'){
+		margin-top:70px;
+	}
+}
+
+// Global: Footer
+footer {
+   & {background-color:#f2f2f2; text-align:center;}
+	p {@include font('Montserrat','Regular',12px,14px); @include center-horizontal(); text-align: center; color: #000; margin-top:0px; margin-bottom:6px;
+		a {color:$color-orange; text-decoration:none; font-style:normal; font-weight:inherit;}
+	}
+	.top {@include center-horizontal(); @include font-size(12px,14px); padding:10px; font-weight:500; border: 1px solid #000; color: #000; text-align: center;  margin-bottom:20px;} 
+	.links {text-align: center;
+		dd {line-height:20px;}
+		a {@include font('Montserrat','Bold',16px,20px); color:#333; text-decoration:none;
+			&:hover {color:$color-orange;}
+		}
+	}	
+	.connect{display: flex; flex-direction: row; align-items: center; justify-content: center; margin-top:20px;
+		a{margin-right: 30px;
+			&:last-child{margin-right: 0;}
+		}
+	}
+   
+   @include breakpoint('>=bp_1024'){
+	   & {padding-top:30px; padding-bottom:30px;}
+	   p {max-width:900px;}
+	   .top {max-width:630px;}
+	   .links {border-top: 1px solid #cccccc; padding-top: 1em; margin-top: 1em;
+		   dl {display: flex; justify-content: center; align-items: center;
+			   dd {
+            &:after{content: "|"; margin: 0 5px; font-weight: 500; color: #000;}
+            &:last-child:after{content: "";}
+			   }
+		   }
+	   }
+	   .connect {margin-top:30px;}
+   }
+   @include breakpoint('bp_768'){
+	   & {padding-top:30px; padding-bottom:30px;}
+	   .container {max-width:700px;}
+   }
+   @include breakpoint('<=bp_540'){
+	   .container {padding-top:20px; padding-bottom:20px;}
+   }
+ }
