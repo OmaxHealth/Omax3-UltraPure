@@ -39,7 +39,7 @@
 			
 			<h2>48 CONTIGUOUS U.S.</h2>
 			<p>Ground: $7.95 (7-10 business days)<br>Rush: $15.95 (3-5 business days)</p>
-			<p>We also ship to: Alaska, Hawaii, Puerto Rico, Guam, Northern Mariana Islands, U.S. Virgin Islands, and American Samoa, and Canada.  These orders will incur an additional surcharge of $9.95.  </p>
+			<p>We also ship to: Alaska, Hawaii, Puerto Rico, Guam, Northern Mariana Islands, U.S. Virgin Islands, and American Samoa.  These orders will incur an additional surcharge of $9.95. All shipments to Canada will incur an additional surcharge of $29.95.</p>
 			<p>*All delivery times above are based on average in-transit time, after the order has been processed by our fulfillment warehouse. Orders are processed during EST business hours Monday - Friday.</p>
 			<p>All shipping prices are quoted in United States dollars. No C.O.D. orders can be accepted.</p>
 			<p>The posted shipping time frame is contingent upon credit card approval and may be delayed should we experience difficulties in obtaining authorization or during holidays.</p>

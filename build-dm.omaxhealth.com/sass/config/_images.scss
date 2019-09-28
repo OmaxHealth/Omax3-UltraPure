@@ -1,0 +1,44 @@
+// SASS: Image Foler Location
+$image-folder: 'images/';
+
+// Layout: Global Images
+$image-logo-omax3: (width:480px,height:140px,file:'logo-omax3.svg');
+$image-icon-phone: (width:56px,height:100px,file:'icon-phone-cell.svg');
+
+$image-icon-facebook: (width:58px,height:58px,file:'icon-facebook.png');
+$image-icon-youtube: (width:64px,height:64px,file:'icon-youtube.png');
+$image-icon-twitter: (width:400px,height:400px,file:'icon-twitter.png');
+
+// Layout: Home
+$image-hero-bg: (width:1400px,height:800px,file:'home/hero-bg.jpg');
+$image-hero-product: (width:700px,height:450px,file:'home/hero-product.png');
+$image-icon-checkmark: (width:60px,height:60px,file:'home/icon-checkmark.svg');
+
+$image-clinical-bg-desktop: (width:705px,height:761px,file:'home/clinical-strength-bg-desktop.jpg');
+$image-clinical-bg-mobile: (width:1020px,height:1219px,file:'home/clinical-strength-bg-mobile.jpg');
+
+$image-how-it-works-1: (width:893px,height:542px,file:'home/how-it-works-1.jpg');
+$image-how-it-works-2: (width:893px,height:542px,file:'home/how-it-works-2.jpg');
+$image-how-it-works-3: (width:640px,height:542px,file:'home/how-it-works-3.jpg');
+
+$image-icon-pill: (width:147px,height:163px,file:'home/icon-pill.png');
+$image-icon-dropper: (width:154px,height:163px,file:'home/icon-dropper.png');
+$image-icon-droplet: (width:99px,height:161px,file:'home/icon-droplet.png');
+
+$image-starter-kit-bg-desktop: (width:1400px,height:620px,file:'home/starter-kit-bg-dekstop.jpg');
+$image-starter-kit-bg-mobile: (width:1020px,height:870px,file:'home/starter-kit-bg-mobile.jpg');
+
+$image-stronger-chart: (width:890px,height:720px,file:'home/stronger-chart.jpg');
+$image-stronger-salmon-bg: (width:630px,height:650px,file:'home/stronger-salmon-bg.jpg');
+
+$image-icon-quote-left: (width:71px,height:50px,file:'home/icon-quote-left.png');
+$image-icon-quote-right: (width:71px,height:50px,file:'home/icon-quote-right.png');
+$image-quotes-karen: (width:325px,height:324px,file:'home/quotes-karen.png');
+$image-quotes-anders: (width:325px,height:324px,file:'home/quotes-anders.png');
+$image-quotes-dr-maroon: (width:328px,height:328px,file:'home/quotes-dr-maroon.png');
+
+$image-lowerCTA-bg: (width:1401px,height:368px,file:'home/lowerCTA-bg.jpg');
+
+// Layout: Select Your Plan
+$image-best-value: (width:150px,height:200px,file:'select-your-plan/best-value.png');
+$image-choose-offer: (width:350px,height:250px,file:'select-your-plan/choose-offer1.jpg');

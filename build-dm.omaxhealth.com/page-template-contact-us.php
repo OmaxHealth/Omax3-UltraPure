@@ -11,7 +11,8 @@
 					<h2>We're here to help</h2>
 					<div class="links">
 						<a class="email" href="mailto:care@omaxhealth.com">care@omaxhealth.com</a>
-						<a class="phone" href="tel:1-800-377-7440">1-800-377-7440</a>				
+						<a class="phone" href="tel:1-800-377-7440">1-800-377-7440</a>
+						<div class="hours">Hours: M-F 8am - 7pm EST</div>		
 					</div>
 				</div>
 			</div>

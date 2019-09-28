@@ -4,7 +4,7 @@
     <p>*with enrollment into VIP auto-shipment program. 60-day money back guarantee on first order only.</p>
     <p>Customer is responsible for obtaining a return authorization and paying return shipping costs.</p>
     <p>Dr. Joseph Maroon and Anders Varner are paid endorsers of Omax3&reg;</p>
-    <p>There is an additional cost of $9.95 to ship to Canada, Hawaii, Alaska and Puerto Rico.</p>
+    <p>There is an additional cost of $9.95 to ship to Hawaii, Alaska and Puerto Rico and $29.95 to ship to Canada.</p>
     <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> Omax Health, Inc.</p>
     <div class="links">
       <dl>
@@ -21,10 +21,9 @@
   </div>
 </footer>
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.4.1/jquery-migrate.js"></script>
 <?php wp_enqueue_script('plugins',get_bloginfo('template_directory').'/js/plugins.min.js',array('jquery')); ?>
 <?php wp_enqueue_script('functions',get_bloginfo('template_directory').'/js/main.min.js',array('jquery','plugins')); ?>
-<?php wp_footer(); ?>	
+<?php wp_footer(); ?>
+
 </body>
 </html>

@@ -1,17 +1,17 @@
 main#article {
-
-	h2 {@include font('MontserratMedium'); color:#333;}
-	p {@include font('MontserratRegular'); color:#333;
-		strong {@include font('MontserratBold');}
+	
+	* {@include font('Montserrat','Regular');}
+	h1 {@include font('Montserrat','SemiBold'); color:#333;}
+	h2 {@include font('Montserrat','Medium'); color:#333;}
+	h3 {@include font('Montserrat','Bold');}
+	p {@include font('Montserrat','Regular'); color:#333;
+		strong {@include font('Montserrat','Bold');}
 		&:last-of-type {margin-bottom:0px;}
 	}
-	.flexcolumn {
-		.column {
-			img {width:100%; height:auto;}
-		}
-	}
+	a {@include font('Montserrat','SemiBold');}
+	img {width:100%; height:auto;}
 
-	@include desktop {
+	@include breakpoint('>=bp_1024'){
 		.container {width:1000px!important; margin-bottom:40px;}
 		h2 {@include font-size(30px); margin-bottom:10px;}
 		p {@include font-size(18px,24px); margin-bottom:12px;}
@@ -23,16 +23,16 @@ main#article {
 			&.single .column {width:100%; margin-left:0px; margin-right:0px;}
 		}
 	}
-	@include tablet_down {
+	@include breakpoint('<=bp_768'){
 		img {@include center-horizontal();}
 	}
-	@include tablet {
+	@include breakpoint('bp_768'){
 		.container {margin-bottom:30px;}
 		h2 {@include font-size(26px); margin-bottom:8px;}
 		p {@include font-size(16px,22px); margin-bottom:10px;}
 		.flexcolumn > .column {margin-bottom:20px;}
 	}
-	@include mobile {
+	@include breakpoint('<=bp_540'){
 		.container {margin-bottom:20px;}
 		h2 {@include font-size(22px); margin-bottom:6px;}
 		p {@include font-size(14px,20px); margin-bottom:6px;}
@@ -50,14 +50,14 @@ main#article {
 			}		
 		}
 		
-		@include desktop {
+		@include breakpoint('>=bp_1024'){
 			.column:first-of-type{width:730px!important; padding-right:60px;}
 			.column:last-of-type {width:270px!important;}
 			.inner {padding:20px;}
 			h3 {@include font-size(16px); margin-bottom:20px;}
 			a {@include font-size(20px,24px);}
 		}
-		@include tablet_down {
+		@include breakpoint('<=bp_768'){
 			.inner {padding:10px;}
 			h3 {@include font-size(14px); margin-bottom:15px;}
 			a {@include font-size(18px);}
@@ -70,21 +70,21 @@ main#article {
 			img {width:100%; height:auto;}
 		}
 		
-		@include desktop {
+		@include breakpoint('>=bp_1024'){
 			& {margin-bottom:60px;}
 			.column:first-of-type{width:360px;}
 			.column:last-of-type{width:640px; padding-left:80px;
 				h2 {@include font-size(28px);}
 			}
 		}
-		@include tablet {
+		@include breakpoint('bp_768'){
 			& {flex-direction:row; flex-wrap:nowrap; justify-content:space-between; align-items:stretch; margin-bottom:30px;}
 			.column:first-of-type{width:290px;}
 			.column:last-of-type{width:460px; padding-left:40px;
 				h2 {@include font-size(24px);} 
 			}	
 		}
-		@include mobile {
+		@include breakpoint('<=bp_540'){
 			& {margin-bottom:20px;}
 		}	
 	}
@@ -98,17 +98,17 @@ main#article {
 		@media (min-width:1190px){
 			.container {width:1170px!important;}		
 		}
-		@include desktop {
+		@include breakpoint('>=bp_1024'){
 			.container {margin-bottom:80px;}
 			h1 {@include font-size(60px); margin:70px auto 35px;}
 			p {@include font-size(18px); margin-bottom:60px;}
 		}
-		@include tablet {
+		@include breakpoint('<=bp_768'){
 			.container {margin-bottom:60px;}
 			h1 {@include font-size(56px); margin:45px auto 10px;}
 			p {@include font-size(20px); margin-bottom:25px;}			
 		}
-		@include mobile {
+		@include breakpoint('<=bp_540'){
 			.container {margin-bottom:40px;}
 			h1 {@include font-size(32px); margin:20px 20px 10px;
 				br {display:none;}
@@ -133,7 +133,7 @@ main#article {
 			a {text-transform:uppercase; color:$color-orange; font-weight:bold;}
 		}
 		
-		@include desktop {
+		@include breakpoint('>=bp_1024'){
 			.flexcolumn.percentage {
 				.inner {@include center-vertical();
 					.percentage {@include font-size(72px);}
@@ -145,7 +145,7 @@ main#article {
 				p {margin-bottom:20px!important;}
 			}
 		}
-		@include tablet {
+		@include breakpoint('<=bp_768'){
 			.flexcolumn.percentage {
 				.inner {padding:20px;
 					.percentage {@include font-size(68px);}
@@ -158,7 +158,7 @@ main#article {
 				p {margin-bottom:18px!important;}
 			}
 		}
-		@include mobile {
+		@include breakpoint('<=bp_540'){
 			.flexcolumn.percentage {
 				.inner {padding:20px;
 					* {display:block!important; text-align:center!important;}
@@ -184,19 +184,19 @@ main#article {
 			a {text-transform:uppercase; color:$color-orange; font-weight:bold; font-style:italic;}
 		}
 		
-		@include desktop {
+		@include breakpoint('>=bp_1024'){
 			.flexcolumn.r6 {
 				h2 {margin-bottom:20px;}
 				a {@include font-size(26px);}	
 			}
 		}
-		@include tablet {
+		@include breakpoint('<=bp_768'){
 			.flexcolumn.r6 {
 				h2 {margin-bottom:16px;}
 				a {@include font-size(20px);}	
 			}
 		}
-		@include mobile {
+		@include breakpoint('<=bp_540'){
 			.flexcolumn.r6 {
 				h2 {margin-bottom:12px;}
 				a {@include font-size(18px);}	

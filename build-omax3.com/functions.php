@@ -1,42 +1,66 @@
 <?php
-// WordPress: Strips information out of head
-remove_action('wp_head', 'wp_generator');
-remove_action('wp_head', 'rsd_link');
-remove_action('wp_head', 'wlwmanifest_link');
-remove_action('wp_head', 'start_post_rel_link', 10, 0 );
-remove_action('wp_head', 'adjacent_posts_rel_link', 10, 0);
+// *****************************************
+// Site Configuration (Update for each site)	
+// *****************************************
 
-// WordPress: Removes the default Post types from the admin section
-add_action( 'admin_menu', 'remove_menus' );
-function remove_menus(){
-	// Removes for Everyone
-	remove_menu_page('edit.php');                   //Posts
-	remove_menu_page('edit-comments.php');          //Comments
+// WordPress: Returns TRUE/FALSE to specific environment, or returns environment name
+function getHostingENV($checkENV = NULL){
 	
-	// Removes for non-Admin Users
-	if(!current_user_can('update_core')) {
-		remove_menu_page('tools.php');					//Tools
+	$domain = "omax3.com";
+	$cnamePROD = "omax3prod.wpengine.com";
+	$cnameSTAGE = "omax3staging.wpengine.com";
+	
+	// Checks if we are in the specific environment
+	if (isset($checkENV)){
+		if ($checkENV == 'production' && ($_SERVER['SERVER_NAME'] == $cnamePROD || $_SERVER['SERVER_NAME'] == $domain || $_SERVER['SERVER_NAME'] == "www.".$domain)){
+			return true;
+		} else if ($checkENV == 'staging' && $_SERVER['SERVER_NAME'] == $cnameSTAGE){
+			return true;
+		} else if ($checkENV == 'local' && explode('.',$_SERVER['SERVER_NAME'])[0] == 'local'){
+			return true;
+		} else {
+			return false;
+		}
+	} 
+	// Returns what environment we are in	
+	else {
+		if ($_SERVER['SERVER_NAME'] == $cnamePROD || $_SERVER['SERVER_NAME'] == $domain || $_SERVER['SERVER_NAME'] == "www.".$domain){
+			return "production";
+		} else if ($_SERVER['SERVER_NAME'] == $cnameSTAGE){
+			return "staging";
+		} else if (explode('.',$_SERVER['SERVER_NAME'])[0] == 'local'){
+			return "local";
+		} else {
+			return "unknown";
+		}		
 	}
 }
 
-// WordPress: Disable WordPress Admin Bar for all users
-show_admin_bar(false);
+// WordPress: Define Offer URLS for Buy Now button links
+function getGTM_ID(){
+	echo "GTM-K2KCLL3";
+}
 
+// WordPress: Define Offer URLS for Buy Now button links
+function getOfferURL($offerID = NULL){
+	$offerURL[1] = "https://omax3.com/cart/buybutton.php?id=mu8ec2ZvjU-JuQiyUWhdfA";
+	//$offerURL[2] = "https://domain.com/button.php";
+	
+	// Outputs the Offer URL based on parameter
+	if (isset($offerID) && is_int($offerID)){
+		echo $offerURL[$offerID];
+	} else {
+		echo $offerURL[1];
+	}
+}
+	
 // WordPress: Forces page templates to load without needing to set template type
 add_filter('template_include', 'force_page_template', 99);
 function force_page_template($template){
 	global $post;
 
-	if (is_front_page() || is_page('lp1001')){//Front Page must be assigned in Setting > Reading
-		$new_template = locate_template(array('page-template-lp1001.php'));
-		if ('' != $new_template) {return $new_template;}
-	}
-	if (is_front_page() || is_page('lp1002')){//Front Page must be assigned in Setting > Reading
-		$new_template = locate_template(array('page-template-lp1002.php'));
-		if ('' != $new_template) {return $new_template;}
-	}
-	if (is_front_page() || is_page('lp1003')){//Front Page must be assigned in Setting > Reading
-		$new_template = locate_template(array('page-template-lp1003.php'));
+	if (is_front_page() || is_page('home')){//Front Page must be assigned in Setting > Reading
+		$new_template = locate_template(array('page-template-home.php'));
 		if ('' != $new_template) {return $new_template;}
 	}
 	if (is_page('select-your-plan')){
@@ -55,18 +79,6 @@ function force_page_template($template){
 		$new_template = locate_template(array('page-template-contact-us.php'));
 		if ('' != $new_template) {return $new_template;}
 	}
-	if (is_page('kick-start-keto-diet-with-omega3s')){
-		$new_template = locate_template(array('page-template-article-keto.php'));
-		if ('' != $new_template) {return $new_template;}
-	}
-	if (is_page('5-reasons-this-new-fish-oil-supplement-is-a-total-game-changer')){
-		$new_template = locate_template(array('page-template-article-5reasons.php'));
-		if ('' != $new_template) {return $new_template;}
-	}
-	if (is_page('omax3-relieved-inflammation-joint-pain')){
-		$new_template = locate_template(array('page-template-article-relieved.php'));
-		if ('' != $new_template) {return $new_template;}
-	}
 	return $template;
 }
 
@@ -80,32 +92,84 @@ function hide_editor(){
 		$show_editor = true;
 		
 		// Comment out pages that should show the editor
-		if ($slug == 'lp1001'){$show_editor = false;}
-		if ($slug == 'lp1002'){$show_editor = false;}
-		if ($slug == 'lp1003'){$show_editor = false;}
+		if ($slug == 'home'){$show_editor = false;}
 		if ($slug == 'select-your-plan'){$show_editor = false;}
 		if ($slug == 'terms-and-conditions'){$show_editor = false;}
 		if ($slug == 'privacy-policy'){$show_editor = false;}
 		if ($slug == 'contact-us'){$show_editor = false;}
-		if ($slug == 'kick-start-keto-diet-with-omega3s'){$show_editor = false;}
-		if ($slug == '5-reasons-this-new-fish-oil-supplement-is-a-total-game-changer'){$show_editor = false;}
-		if ($slug == 'omax3-relieved-inflammation-joint-pain'){$show_editor = false;}	
-		
+				
 		if (!$show_editor){
 			remove_post_type_support('page','editor');
 		}	
 	}
 }
 
-// WordPress: Makes sure there is a session set (used for tracking offer landing)
-add_action('init', 'WPSession', 1);
-function WPSession() {
-	if(!session_id()) {
-		session_start();
-	}
+// ************************************
+// FAQ Section (Custom Post Type)
+// ************************************	
+/*
+add_action('init','create_faq_cpt',0);
+function create_faq_cpt() {
+	$labels = array(
+		'name' => 'FAQs',
+		'singular_name' => 'FAQ',
+		'menu_name' => 'FAQs',
+		'name_admin_bar' => 'FAQ',
+		'attributes' => 'FAQ Attributes',
+		'parent_item_colon' => 'Parent FAQ:',
+		'all_items' => 'All FAQs',
+		'add_new_item' => 'Add New FAQ',
+		'add_new' => 'Add New',
+		'new_item' => 'New FAQ',
+		'edit_item' => 'Edit FAQ',
+		'update_item' => 'Update FAQ',
+		'view_item' => 'View FAQ',
+		'view_items' => 'View FAQs',
+		'search_items' => 'Search FAQ',
+		'not_found' => 'FAQ Not found',
+		'not_found_in_trash' => 'FAQ Not found in Trash'
+	);
+	$args = array(
+		'label' => 'FAQ',
+		'description' => 'FAQ Question and Answer Block',
+		'labels' => $labels,
+		'menu_icon' => 'dashicons-book-alt',
+		'supports' => array('title','editor'),
+		'taxonomies' => array(),
+		'public' => false,
+		'show_ui' => true,
+		'show_in_menu' => true,
+		'menu_position' => 5,
+		'show_in_admin_bar' => false,
+		'show_in_nav_menus' => false,
+		'can_export' => true,
+		'has_archive' => false,
+		'hierarchical' => false,
+		'exclude_from_search' => true,
+		'show_in_rest' => true,
+		'publicly_queryable' => true,
+		'capability_type' => 'post',
+	);
+	register_post_type('faq',$args);
 }
+*/
 
+// ************************************
+// Global Settings (Same for all sites)
+// ************************************	
 
+// WordPress: Disable WordPress Gutenberg Editor (v5.0+)
+add_filter('use_block_editor_for_post', '__return_false', 10);
+add_filter('gutenberg_can_edit_post', '__return_false', 10);
+
+// WordPress: Moves jQuery calls to the footer
+add_action('wp_default_scripts','move_jquery_into_footer');
+function move_jquery_into_footer($wp_scripts){
+    if (is_admin()){return;}
+    $wp_scripts->add_data('jquery','group',1);
+    $wp_scripts->add_data('jquery-core','group',1);
+    $wp_scripts->add_data('jquery-migrate','group',1);
+}
 
 // WordPress: Changes the outgoing Email Name
 add_filter('wp_mail_from_name','wpb_sender_name');
@@ -117,6 +181,70 @@ function wpb_sender_name($original_email_from){
 add_filter('wp_mail_from','wpb_sender_email');
 function wpb_sender_email($original_email_address){
     return 'noreply@omaxhealth.com';
+}
+	
+// WordPress: Strips information out of head
+add_action('init','clean_wp_head');
+function clean_wp_head(){
+	remove_action('wp_head','wp_generator');
+	remove_action('wp_head','rsd_link');
+	remove_action('wp_head','feed_links', 2);
+	remove_action('wp_head','feed_links_extra', 3);
+	remove_action('wp_head','index_rel_link');
+	remove_action('wp_head','wlwmanifest_link');
+	remove_action('wp_head','start_post_rel_link', 10, 0);
+	remove_action('wp_head','parent_post_rel_link', 10, 0);
+	remove_action('wp_head','adjacent_posts_rel_link', 10, 0);
+	remove_action('wp_head','adjacent_posts_rel_link_wp_head', 10, 0);
+	remove_action('wp_head','wp_shortlink_wp_head', 10, 0);
+}
+
+// WordPress: Remove JSON API links in header
+add_action('after_setup_theme','remove_json_api');
+function remove_json_api(){
+	remove_action('wp_head','rest_output_link_wp_head', 10);
+	remove_action('wp_head','wp_oembed_add_discovery_links', 10);
+	remove_action('rest_api_init','wp_oembed_register_route');
+	add_filter('embed_oembed_discover','__return_false');
+	remove_filter('oembed_dataparse','wp_filter_oembed_result', 10);
+	remove_action('wp_head','wp_oembed_add_discovery_links');
+	remove_action('wp_head','wp_oembed_add_host_js');
+	//add_filter( 'rewrite_rules_array','disable_embeds_rewrites');
+}
+
+// WordPress: Disable the REST API 
+add_action('after_setup_theme','disable_json_api');
+function disable_json_api(){
+  // Filters for WP-API version 1.x
+  add_filter('json_enabled','__return_false');
+  add_filter('json_jsonp_enabled','__return_false');
+  // Filters for WP-API version 2.x
+  add_filter('rest_enabled','__return_false');
+  add_filter('rest_jsonp_enabled','__return_false');
+}
+
+// WordPress: Removes the default Post types from the admin section
+add_action('admin_menu','remove_menus');
+function remove_menus(){
+	// Removes for Everyone
+	remove_menu_page('edit.php');                   //Posts
+	remove_menu_page('edit-comments.php');          //Comments
+	
+	// Removes for non-Admin Users
+	if(!current_user_can('update_core')) {
+		remove_menu_page('tools.php');					//Tools
+	}
+}
+
+// WordPress: Disable WordPress Admin Bar for all users
+show_admin_bar(false);
+
+// WordPress: Makes sure there is a session set
+add_action('init', 'WPSession', 1);
+function WPSession() {
+	if(!session_id()) {
+		session_start();
+	}
 }
 
 // WordPress: Add slug name to body class
@@ -181,52 +309,4 @@ function disable_wp_emojicons(){
 		}
 	}
 }
-
-// WordPress: Adds Custom Post Type for FAQ
-/*
-add_action('init','create_faq_cpt',0);
-function create_faq_cpt() {
-	$labels = array(
-		'name' => 'FAQs',
-		'singular_name' => 'FAQ',
-		'menu_name' => 'FAQs',
-		'name_admin_bar' => 'FAQ',
-		'attributes' => 'FAQ Attributes',
-		'parent_item_colon' => 'Parent FAQ:',
-		'all_items' => 'All FAQs',
-		'add_new_item' => 'Add New FAQ',
-		'add_new' => 'Add New',
-		'new_item' => 'New FAQ',
-		'edit_item' => 'Edit FAQ',
-		'update_item' => 'Update FAQ',
-		'view_item' => 'View FAQ',
-		'view_items' => 'View FAQs',
-		'search_items' => 'Search FAQ',
-		'not_found' => 'FAQ Not found',
-		'not_found_in_trash' => 'FAQ Not found in Trash'
-	);
-	$args = array(
-		'label' => 'FAQ',
-		'description' => 'FAQ Question and Answer Block',
-		'labels' => $labels,
-		'menu_icon' => 'dashicons-book-alt',
-		'supports' => array('title','editor'),
-		'taxonomies' => array(),
-		'public' => false,
-		'show_ui' => true,
-		'show_in_menu' => true,
-		'menu_position' => 5,
-		'show_in_admin_bar' => false,
-		'show_in_nav_menus' => false,
-		'can_export' => true,
-		'has_archive' => false,
-		'hierarchical' => false,
-		'exclude_from_search' => true,
-		'show_in_rest' => true,
-		'publicly_queryable' => true,
-		'capability_type' => 'post',
-	);
-	register_post_type('faq',$args);
-}
-*/
 ?>

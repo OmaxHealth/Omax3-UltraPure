@@ -1,3 +1,4 @@
+<?php set_query_var('custom_body_class','page-article'); ?>
 <?php get_template_part('block','header'); ?>
 <?php the_post(); ?>
 
@@ -22,7 +23,7 @@
 				<div class="column">
 					<div class="inner">
 						<h3>Ready to give omax3 a try?</h3>
-						<a href="<?php bloginfo('url'); ?>/lp1001/?utm_source=advertorial&utm_medium=cpc&utm_campaign=keto-diet">*First Box $19.95 Plus Free Shipping</a>
+						<a href="<?php bloginfo('template_directory'); ?>/?utm_source=advertorial&utm_medium=cpc&utm_campaign=keto-diet">*First Box $19.95 Plus Free Shipping</a>
 					</div>
 				</div>
 			</div>
@@ -72,7 +73,7 @@
 					 <p>If you're looking to get serious about your Keto diet,<br/>you really owe it to yourself to try Omax3.</p>
 					 <p><strong>* For a limited time, you can get your first month's supply for $19.95.</strong></p>
 					 <p>Give them a try before this offer goes away!</p>
-					 <a href="<?php bloginfo('url'); ?>/lp1001/?utm_source=advertorial&amp;utm_medium=cpc&amp;utm_campaign=keto-diet">*First Box $19.95 Plus Free Shipping</a>
+					 <a href="<?php bloginfo('template_directory'); ?>/?utm_source=advertorial&amp;utm_medium=cpc&amp;utm_campaign=keto-diet">*First Box $19.95 Plus Free Shipping</a>
 				</div>
 			</div>
 

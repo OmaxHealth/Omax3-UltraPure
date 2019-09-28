@@ -1,3 +1,4 @@
+<?php set_query_var('custom_body_class','page-article'); ?>
 <?php get_template_part('block','header'); ?>
 <?php the_post(); ?>
 
@@ -21,7 +22,7 @@
 				<div class="column">
 					<div class="inner">
 						<h3>Ready to give omax3 a try?</h3>
-						<a href="<?php bloginfo('url'); ?>/lp1001/?utm_source=advertorial&utm_medium=cpc&utm_campaign=jointpain">GET 50% OFF YOUR FIRST BOX NOW!*</a>
+						<a href="<?php bloginfo('template_directory'); ?>/?utm_source=advertorial&utm_medium=cpc&utm_campaign=jointpain">GET 50% OFF YOUR FIRST BOX NOW!*</a>
 					</div>
 				</div>
 			</div>
@@ -70,7 +71,7 @@
 			<div class="flexcolumn r6 single">
 				<div class="column">
 					 <h2>Ready to give Omax3 a try?</h2>
-					 <a href="<?php bloginfo('url'); ?>/lp1001/?utm_source=advertorial&utm_medium=cpc&utm_campaign=jointpain">*Get 50% off your first box now!</a>
+					 <a href="<?php bloginfo('template_directory'); ?>/?utm_source=advertorial&utm_medium=cpc&utm_campaign=jointpain">*Get 50% off your first box now!</a>
 				</div>
 			</div>			
 			

@@ -15,10 +15,14 @@
 						<li><strong>3x stronger</strong> than top selling brands</li>
 						<li><strong>Patented</strong> inflammation support formula</li>
 					</ul>
-					<a class="button" href="https://omax3.com/cart/buybutton.php?id=mu8ec2ZvjU-JuQiyUWhdfA"><span>Get Started</span></a>
+					<a class="button" href="<?php getOfferURL('main'); ?>"><span>Get Started</span></a>
 				</div>
 				<div class="column right">
-					<img src="<?php bloginfo('template_directory'); ?>/images/home/hero-product.png" alt="Omax3 Ultra Pure"/>
+					<picture>
+						<source srcset="<?php bloginfo('template_directory'); ?>/images/home/hero-product.png, <?php bloginfo('template_directory'); ?>/images/home/hero-product@2x.png 2x" media="(min-width: 768px)">
+						<source srcset="<?php bloginfo('template_directory'); ?>/images/home/hero-product.png" media="(max-width: 767px)">
+						<img srcset="<?php bloginfo('template_directory'); ?>/images/home/hero-product.png" alt="Omax3 Ultra Pure">
+					</picture>
 				</div>
 			</div>
 		</div>
@@ -72,7 +76,7 @@
 					<p>After 60 days, receive a fresh 2 month supply of Omax3 at 20% off plus free shipping.</p>
 				</div>
 			</div>
-			<a class="button" href="https://omax3.com/cart/buybutton.php?id=mu8ec2ZvjU-JuQiyUWhdfA"><span>Get Started</span></a>
+			<a class="button" href="<?php getOfferURL('main'); ?>"><span>Get Started</span></a>
 		</div>
 	</section>
 
@@ -82,7 +86,7 @@
 				<div class="column left">
 					<h2>What's in Your<br/>Starter Kit</h2>
 					<p>You get 2 boxes of Omax3 Ultra-Pure, plus high-potency Vitamin D3 and Dr. Maroon's, &#8220;Why You Need Fish Oil&#8221; eBook - all shipped free.</p>
-					<a class="button" href="https://omax3.com/cart/buybutton.php?id=mu8ec2ZvjU-JuQiyUWhdfA"><span>Get Started</span></a>
+					<a class="button" href="<?php getOfferURL('main'); ?>"><span>Get Started</span></a>
 				</div>
 				<div class="column right">&nbsp;</div>
 			</div>
@@ -104,7 +108,7 @@
 			<div class="inner">
 				<h2>Up to 3X Stronger<br/>than the Leading<br/>Omega-3 Supplement</h2>
 				<img src="<?php bloginfo('template_directory'); ?>/images/home/stronger-chart.jpg" alt="3x Stronger"/>
-				<a class="button" href="https://omax3.com/cart/buybutton.php?id=mu8ec2ZvjU-JuQiyUWhdfA"><span>Order Now</span></a>
+				<a class="button" href="<?php getOfferURL('main'); ?>"><span>Order Now</span></a>
 			</div>
 		</div>
 	</section>
@@ -174,8 +178,8 @@
 		<div class="container">
 			<div class="inner">
 				<h2>Power Your Body with Omax-3 Ultra-Pure.</h2>
-				<p>Buy One Get One Free*<br/> + 2 Free Gifts</p>
-				<a class="button" href="https://omax3.com/cart/buybutton.php?id=mu8ec2ZvjU-JuQiyUWhdfA"><span>Get Started</span></a>
+				<p>Only $47.95 and Receive a <br/>FREE BOX* + 2 FREE GIFTS</p>
+				<a class="button" href="<?php getOfferURL('main'); ?>"><span>Get Started</span></a>
 			</div>
 		</div>
 	</section>

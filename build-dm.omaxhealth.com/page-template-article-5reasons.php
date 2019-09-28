@@ -1,3 +1,4 @@
+<?php set_query_var('custom_body_class','page-article'); ?>
 <?php get_template_part('block','header'); ?>
 <?php the_post(); ?>
 
@@ -20,7 +21,7 @@
 				<div class="column">
 					<div class="inner">
 						<h3>Ready to give omax3 a try?</h3>
-						<a href="<?php bloginfo('url'); ?>/lp1001/?utm_source=advertorial&utm_medium=cpc&utm_campaign=5reasons">GET 50% OFF YOUR FIRST BOX NOW!*</a>
+						<a href="<?php bloginfo('url'); ?>/?utm_source=advertorial&utm_medium=cpc&utm_campaign=5reasons">GET 50% OFF YOUR FIRST BOX NOW!*</a>
 					</div>
 				</div>
 			</div>
@@ -85,7 +86,7 @@
 
 			<div class="flexcolumn r8 single">
 				<div class="column">
-					 <p>If you're going to take health supplements, doesn't it make sense to take the very best the market has to offer? If you order Omax3 now, <a href="<?php bloginfo('url'); ?>/lp1001/?utm_source=advertorial&utm_medium=cpc&utm_campaign=5reasons">you'll get your first month's supply for 50% off.</a> Try it today!</p>
+					 <p>If you're going to take health supplements, doesn't it make sense to take the very best the market has to offer? If you order Omax3 now, <a href="<?php bloginfo('url'); ?>/?utm_source=advertorial&utm_medium=cpc&utm_campaign=5reasons">you'll get your first month's supply for 50% off.</a> Try it today!</p>
 				</div>
 			</div>	
 

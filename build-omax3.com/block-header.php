@@ -5,12 +5,12 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-	<?php /*
+	<?php if (!getHostingENV('local')){ ?>
 	<!-- Google Tag Manager -->
 	<script>var dataLayer = [];</script>
-	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-K5S38ZM');</script>
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','<?php getGTM_ID(); ?>');</script>
 	<!-- End Google Tag Manager -->
-	*/ ?>
+	<?php } ?>
 	
 	<title><?php wp_title(''); ?></title>
 	<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_directory'); ?>/images/favicon.ico" />
@@ -26,19 +26,19 @@
 	
 </head>
 <body <?php body_class(get_query_var('custom_body_class')); ?>>
-<?php /*	
+<?php if (!getHostingENV('local')){ ?>
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K5S38ZM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=<?php getGTM_ID(); ?>" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-*/ ?>
+<?php } ?>
 
 <header>
 	<div class="upper">
 		<div class="container">
 			<a class="logo" href="<?php bloginfo('url'); ?>">Omax3 Ultra Pure</a>
 			<nav class="global">
-				<a class="phone" href="tel:1-800-000-0000">Click to Call</a>
-				<a class="button" href="https://omax3.com/cart/buybutton.php?id=mu8ec2ZvjU-JuQiyUWhdfA"><span>Order Now</span></a>
+				<a class="phone" href="tel:1-888-321-3804">Click to Call</a>
+				<a class="button" href="<?php getOfferURL('main'); ?>"><span>Order Now</span></a>
 			</nav>			
 		</div>
 	</div>

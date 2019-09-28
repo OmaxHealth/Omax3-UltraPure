@@ -1,0 +1,27 @@
+@charset "UTF-8";
+/*!
+THEME NAME: DM Landing Pages
+THEME URI: http://dm.omaxhealth.com
+DESCRIPTION: A Responsive Template
+VERSION: 1.0
+AUTHOR: OMax Health
+AUTHOR URI: http://www.omaxhealth.com
+*/
+ 
+// SASS: Global Elements
+@import 
+	"global/_breakpoints.scss",
+	"global/_mixins.scss",
+	"global/_config.scss",
+	"global/_global.scss";
+
+// SASS: Page Layouts
+@import 
+	"layouts/_page-lp1001.scss",
+	"layouts/_page-lp1002.scss",
+	"layouts/_page-lp1003.scss",
+	"layouts/_page_select-your-plan.scss",
+	"layouts/_page_articles.scss",
+	"layouts/_page-legal.scss",
+	"layouts/_page-contact-us.scss",
+	"layouts/_page-wordpress.scss";
